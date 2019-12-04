@@ -1,0 +1,26 @@
+{
+  "name": "Ad Frontend Design & Development",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adfrontend/fdnd.nl.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adfrontend/fdnd.nl/issues"
+  },
+  "homepage": "https://github.com/adfrontend/fdnd.nl#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^0.9.0"
+  },
+  "devDependencies": {
+    "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.3"
+  }
+}
