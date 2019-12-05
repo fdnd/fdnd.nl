@@ -6,7 +6,7 @@ before_script:
 script: eleventy
 deploy:
   local-dir: _site
-  # fqdn: fdnd.nl
+  fqdn: fdnd.nl
   provider: pages
   target_branch: master
   skip-cleanup: true
