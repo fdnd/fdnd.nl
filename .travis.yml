@@ -5,7 +5,7 @@ before_script:
   - npm install @11ty/eleventy -g
 script: eleventy
 deploy:
-  local-dir: /
+  local-dir: _site
   # fqdn: fdnd.nl
   provider: pages
   target_branch: master
