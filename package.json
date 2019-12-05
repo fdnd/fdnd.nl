@@ -1,22 +1,22 @@
 {
-  "name": "Ad Frontend Design & Development",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "name": "fdnd.nl",
+  "version": "0.0.1",
+  "description": "It's a website for the associate degree programme Frontend Design & Development at the Amsterdam University of Applied Sciences",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/adfrontend/fdnd.nl.git"
   },
+  "homepage": "https://fdnd.nl",
+  "author": "Joost Faber, Justus Sturkenboom",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/adfrontend/fdnd.nl/issues"
   },
-  "homepage": "https://github.com/adfrontend/fdnd.nl#readme",
   "dependencies": {
     "@11ty/eleventy": "^0.9.0"
   },
