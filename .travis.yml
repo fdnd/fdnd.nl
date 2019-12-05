@@ -6,11 +6,11 @@ before_script:
 script: eleventy
 deploy:
   local-dir: /
-  fqdn: fdnd.nl
+  # fqdn: fdnd.nl
   provider: pages
   target_branch: master
   skip-cleanup: true
-  github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
+  github-token: $GITHUB_TOKEN
   keep-history: true
   on:
-    branch: master
+    branch: source
