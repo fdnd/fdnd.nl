@@ -6,7 +6,7 @@ teaser: Dé 2 jarige HBO opleiding voor Frontend designers en developers  in Ams
 
 ## Opleidingsprofiel
 
-Bij de opleiding Frontend Design & Development leer je interactieve toepassingen maken voor het web. In verschillende projecten maak je met HTML, CSS en Javascript echte opdrachten voor echte opdrachtgevers.
+*Bij de opleiding Frontend Design & Development leer je interactieve toepassingen maken voor het web. In verschillende projecten maak je met HTML, CSS en Javascript echte opdrachten voor echte opdrachtgevers.
 
 Alles wat je gaat doen, doe je met code: Met code maak je een interactieve website die je gaat testen met mensen, met code los je een probleem op voor de Gemeente Amsterdam, met code ontwerp je voor de Openbare Bibliotheek een betere zoekfunctie door de collectie, en met code help je de onderzoekers van het Academisch Medisch Centrum met een interactief dashboard...
 
