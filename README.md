@@ -2,10 +2,10 @@
 
 Welcome to the main website project for the associate degree Frontend Design & Development. It's made using [11ty](https://www.11ty.io/) and automagically built by [travis-ci](https://travis-ci.org/). Feel free to report any issues you might have with this site, please use the issue tool provided.
 
-## Install
+## Install packages
 
     npm install
 
-## Run locally
+## Run locally for testing
 
-    npx eleventy --serve
+    npm start
