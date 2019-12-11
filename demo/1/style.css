@@ -14,10 +14,11 @@ body{
   margin: 0;
   font-family: Sans-Serif;
   font-size: 1.4em;
-  color: white;
+  background: purple;
   background: linear-gradient(to bottom right, #FFAEFD, #2361EC);
   background-attachment: fixed;
   background-repeat: no-repeat;
+  color: white;
   width: 100vw;
   height: 100vh;
 }
@@ -27,13 +28,45 @@ section, header, footer{
   margin-left: 8rem;
   padding: 2rem;
 }
+nav{
+  position:fixed;
+  width: 100vw;
+  font-size: 0.8em;
+  top: 0;
+  z-index:2;
+  display: flex;
+  background: purple;
+  background: linear-gradient(to right, #FFAEFD, #2361EC);
+  xpadding: 1em;
+  margin-top: -20em;
+  transition: margin 0.5s ease-out;
+}
+.show{
+  margin-top:0;
+}
+nav a{
+  display: block;
+  color: white;
+  padding: 0.5em 1em 0.5em 0;
+}
+nav span{
+  padding: 0.5em;
+}
+nav ul{
+  margin: 0;
+  padding: 0;
+}
+nav ul li{
+  display: inline-block;
+  xpadding: 1em;
+}
 
 
 /* *************** */
 header{
   font-size: 1.2em;
   xmin-height: 60vh;
-  width: 30rem
+  width: 30rem;
 }
 h1{
   font-size: 2em;
@@ -63,25 +96,28 @@ h1 span:last-of-type{
 
 
 /* *************** */
+article{
+  margin: 4em 0 4em 0;
+}
 section{
   font-size: 1em;
   line-height: 140%;
-  margin-top: 2em;
+  margin-top: -5em;
   background: white;
   color: purple;
   mix-blend-mode: screen;
   border-radius: 0.4em;
 }
-section{
-  margin-top: -5em;
-}
 div{
-  margin-top: 4em;
+  font-size: 0.8em;
+  top: 0;
   overflow-x: scroll;
   display: flex;
-  flex-wrap: wrap;
 }
-div:first-of-type, div:last-of-type{
+article:nth-of-type(2) div{
+    flex-wrap: wrap;
+}
+article:first-of-type div, article:last-of-type div{
   width:100vw;
   flex-wrap: nowrap;
 }
@@ -90,14 +126,13 @@ div img{
   margin:0 0.4em 0.4em 0;
 }
 div p {
-  width: 26rem;
-  flex: 0 0 26rem;
-  xbackground: white;
+  width: 22rem;
+  flex: 0 0 22rem;
   color: white;
   mix-blend-mode: screen;
   border-radius: 0.3rem;
   margin: 0;
-  padding: 2.8rem;
+  padding: 4em 2.8rem;
   position: relative;
 }
 div p:before {
@@ -110,7 +145,7 @@ div p:before {
   background: purple;
   mix-blend-mode: screen;
   position:absolute;
-  top: 1em;
+  top: 3em;
   left: -1.6em;
 }
 video{
