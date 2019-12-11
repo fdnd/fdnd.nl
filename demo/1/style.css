@@ -111,8 +111,11 @@ section{
 div{
   font-size: 0.8em;
   top: 0;
-  overflow-x: scroll;
   display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: mandatory;
+  xscroll-snap-destination: 0% 100%;
+  xscroll-snap-points-x: repeat(100%);
 }
 article:nth-of-type(2) div{
     flex-wrap: wrap;
@@ -124,6 +127,7 @@ article:first-of-type div, article:last-of-type div{
 
 div img{
   margin:0 0.4em 0.4em 0;
+  scroll-snap-align: start;
 }
 div p {
   width: 22rem;
