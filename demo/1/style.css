@@ -117,11 +117,6 @@ video{
   width: 595px;
   height: 446px;
 }
-.showvideo{
-  width: 595px;
-  height: 446px;
-  background: purple;
-}
 .hide{
   display: none;
 }

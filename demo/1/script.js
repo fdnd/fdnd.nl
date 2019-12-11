@@ -5,12 +5,15 @@ console.log("link", link);
 console.log("video", video);
 console.log("pix", pix);
 
+/* VIDEO ***
+  Croppen,Trimmen, exporteren https://online-video-cutter.com
+  MOV to MP4 https://www.onlineconverter.com/mov-to-mp4
+*/
 
 link.addEventListener("click",function(){
-    console.log(this);
+    pix.classList.add('hide');
     video.classList.remove('hide');
     video.play();
-    pix.classList.add('hide');
     //video.src="img/hackaton.mp4";
   }
 );
