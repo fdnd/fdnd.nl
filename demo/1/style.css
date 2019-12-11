@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/*
+  https://www.css-gradient.com
+  background: linear-gradient(to bottom right, #B630B6, #9FD156);
+  background: linear-gradient(to bottom right, #2FB352, #D73C50);
+  background: linear-gradient(to bottom right, #BB4897, #385671);
+*/
+
+body{
+  margin: 0;
+  font-family: Sans-Serif;
+  font-size: 1.4em;
+  color: white;
+  background: linear-gradient(to bottom right, #FFAEFD, #2361EC);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+section, header, footer{
+  max-width: 36rem;
+  margin: 0;
+  margin-left: 8rem;
+  padding: 2rem;
+}
+
+
+/* *************** */
+header{
+  font-size: 1.2em;
+  xmin-height: 60vh;
+  width: 30rem
+}
+h1{
+  font-size: 2em;
+  margin: 1rem 0 0 0;
+  position: relative;
+}
+h1 span{ }
+h1 span[title="HBO Associate Degree"] {
+  content: "Ad";
+  display:block;
+  width:2.1em;
+  height:2.1em;
+  font-size: 0.6em;
+  line-height: 1.3em;
+  padding: 0.4em;
+  border-radius: 50%;
+  background: white;
+  color: purple;
+  mix-blend-mode: screen;
+  position:absolute;
+  top: -0.1em;
+  left: -0.4em;
+}
+h1 span:last-of-type{
+  margin-left: 1.2em;
+}
+
+
+/* *************** */
+section{
+  font-size: 1em;
+  line-height: 140%;
+  margin-top: 2em;
+  background: white;
+  color: purple;
+  mix-blend-mode: screen;
+  border-radius: 0.4em;
+}
+section{
+  margin-top: -5em;
+}
+div{
+  margin-top: 4em;
+  overflow-x: scroll;
+  display: flex;
+  flex-wrap: wrap;
+}
+div:first-of-type, div:last-of-type{
+  width:100vw;
+  flex-wrap: nowrap;
+}
+
+div img{
+  margin:0 0.4em 0.4em 0;
+}
+div p {
+  width: 26rem;
+  flex: 0 0 26rem;
+  xbackground: white;
+  color: white;
+  mix-blend-mode: screen;
+  border-radius: 0.3rem;
+  margin: 0;
+  padding: 2.8rem;
+  position: relative;
+}
+div p:before {
+  content: "";
+  display:block;
+  width:0.8rem;
+  height:0.8rem;
+  border-radius: 50%;
+  border: 1.2em white solid;
+  background: purple;
+  mix-blend-mode: screen;
+  position:absolute;
+  top: 1em;
+  left: -1.6em;
+}
+video{
+  width: 595px;
+  height: 446px;
+}
+.hide{
+  display: none;
+}
+a#hackaton_video {
+  display: block;
+  margin-top: 0.4em;
+}
+p{ }
+a{
+  color: purple;
+}
+p a{
+  color: white;
+}
+
+/* *************** */
+footer{
+  font-size: 0.8em;
+  line-height: 140%;
+  margin-top: 2em;
+}
+footer a {
+  color: white;
+}
+img[title="hva"]{
+  width: 16em;
+  xmix-blend-mode: screen;
+  filter: brightness(100);
+  xfill: white;
+  margin: 1em 0;
+}
+img[title="cmd"]{
+  display: none;
+  width: 10em;
+  mix-blend-mode: screen;
+  filter: brightness(100);
+  xfill: white;
+  margin: 1em 0;
+}
