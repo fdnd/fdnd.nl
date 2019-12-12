@@ -23,11 +23,11 @@ body{
   height: 100vh;
 }
 section, header, footer{
-  max-width: 36rem;
-  margin: 0;
-  margin-left: 8rem;
+  max-width: 32rem;
+  margin: 0 1rem;
   padding: 2rem;
 }
+
 nav{
   position:fixed;
   width: 100vw;
@@ -35,14 +35,29 @@ nav{
   top: 0;
   z-index:2;
   display: flex;
-  background: purple;
+  background: #FFAEFD;
   background: linear-gradient(to right, #FFAEFD, #2361EC);
   xpadding: 1em;
   margin-top: -20em;
-  transition: margin 0.5s ease-out;
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}
+nav span{
+  display:block;
+  width:2.1em;
+  height:2.1em;
+  font-size: 0.7em;
+  font-size: bold;
+  line-height: 1.3em;
+  padding: 0.4em;
+  margin: 0.5em;
+  border-radius: 50%;
+  background: white;
+  color: purple;
 }
 .show{
   margin-top:0;
+  opacity: 1;
 }
 nav a{
   display: block;
@@ -99,7 +114,7 @@ h1 span:last-of-type{
 article{
   margin: 4em 0 4em 0;
 }
-section{
+article section{
   font-size: 1em;
   line-height: 140%;
   margin-top: -5em;
@@ -108,28 +123,23 @@ section{
   mix-blend-mode: screen;
   border-radius: 0.4em;
 }
-div{
+article div{
   font-size: 0.8em;
   top: 0;
   display: flex;
+  flex-wrap: nowrap;
+  width:100vw;
   overflow-x: scroll;
   scroll-snap-type: mandatory;
   xscroll-snap-destination: 0% 100%;
   xscroll-snap-points-x: repeat(100%);
-}
-article:nth-of-type(2) div{
-    flex-wrap: wrap;
-}
-article:first-of-type div, article:last-of-type div{
-  width:100vw;
-  flex-wrap: nowrap;
-}
 
-div img{
+}
+article div img{
   margin:0 0.4em 0.4em 0;
   scroll-snap-align: start;
 }
-div p {
+article div p {
   width: 22rem;
   flex: 0 0 22rem;
   color: white;
@@ -139,7 +149,7 @@ div p {
   padding: 4em 2.8rem;
   position: relative;
 }
-div p:before {
+article div p:before {
   content: "";
   display:block;
   width:0.8rem;
@@ -152,7 +162,7 @@ div p:before {
   top: 3em;
   left: -1.6em;
 }
-video{
+article div video{
   width: 595px;
   height: 446px;
 }
@@ -180,18 +190,30 @@ footer{
 footer a {
   color: white;
 }
-img[title="hva"]{
+footer img[title="hva"]{
   width: 16em;
   xmix-blend-mode: screen;
   filter: brightness(100);
   xfill: white;
   margin: 1em 0;
 }
-img[title="cmd"]{
+footer img[title="cmd"]{
   display: none;
   width: 10em;
   mix-blend-mode: screen;
   filter: brightness(100);
   xfill: white;
   margin: 1em 0;
+}
+
+/* ****** */
+@media all and (min-width: 42em) {
+  section, header, footer{
+    margin-left: 8rem;
+  }
+}
+@media all and (min-width: 60em) {
+  article:nth-of-type(2) div{
+      flex-wrap: wrap;
+  }
 }
