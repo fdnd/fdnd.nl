@@ -86,7 +86,7 @@ nav ul li{
 header{
   font-size: 1.2em;
   xmin-height: 60vh;
-  width: 30rem;
+  max-width: 30rem;
 }
 h1{
   font-size: 2em;
