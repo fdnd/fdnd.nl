@@ -31,7 +31,8 @@ section, header, footer{
 nav{
   position:fixed;
   width: 100vw;
-  font-size: 0.8em;
+  font-size: 0.75em;
+  font-weight:600;
   top: 0;
   z-index:2;
   display: flex;
@@ -62,7 +63,11 @@ nav span{
 nav a{
   display: block;
   color: white;
-  padding: 0.5em 1em 0.5em 0;
+  padding: 0.5em;
+  text-decoration: none;
+}
+nav a:hover{
+  background-color: purple;
 }
 nav span{
   padding: 0.5em;
