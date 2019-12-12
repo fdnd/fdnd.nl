@@ -15,14 +15,15 @@ videolink.addEventListener("click",function(){
     // video.classList.remove('hide');
     if(video.paused){
       video.play();
-      this.textContent="Pauzeer de Frontend Hackaton video.";
+      this.textContent="Pauzeer de video van een Frontend Hackaton.";
     }else{
       video.pause();
       this.textContent="Speel de video van een Frontend Hackaton.";
     }
-    //video.src="img/hackaton.mp4";
-  }
-);
+    video.onended = (event) => {
+      this.textContent="Bekijk de video van een Frontend Hackaton nog een keer.";
+    };
+});
 
 /* INTERSECTION OBSERVER ****
   MDN https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
