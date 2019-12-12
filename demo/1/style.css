@@ -4,6 +4,9 @@
 }
 
 /*
+  ** BODY **
+  Body en basis settings
+
   https://www.css-gradient.com
   background: linear-gradient(to bottom right, #B630B6, #9FD156);
   background: linear-gradient(to bottom right, #2FB352, #D73C50);
@@ -28,6 +31,10 @@ section, header, footer{
   padding: 2rem;
 }
 
+/*
+  ** NAVIGATIE **
+  Navigatie komt in beeld als de header uit beeld is.
+*/
 nav{
   position:fixed;
   width: 100vw;
@@ -82,11 +89,15 @@ nav ul li{
 }
 
 
-/* *************** */
+/*
+  ** HEADER **
+  Header met textueel AD FDND logo
+*/
+
 header{
   font-size: 1.2em;
-  xmin-height: 60vh;
   max-width: 30rem;
+  min-height: 75vh;
 }
 h1{
   font-size: 2em;
@@ -115,7 +126,11 @@ h1 span:last-of-type{
 }
 
 
-/* *************** */
+/*
+  ** ARTICLES **
+  Articles met teksten en plaatjes in de main
+*/
+main{}
 article{
   margin: 4em 0 4em 0;
 }
@@ -186,7 +201,10 @@ p a{
   color: white;
 }
 
-/* *************** */
+/*
+  ** FOOTER **
+  met contact info en een hva logo
+*/
 footer{
   font-size: 0.8em;
   line-height: 140%;
@@ -211,7 +229,9 @@ footer img[title="cmd"]{
   margin: 1em 0;
 }
 
-/* ****** */
+/*
+  ** RESPONISVE **
+*/
 @media all and (min-width: 42em) {
   section, header, footer{
     margin-left: 8rem;
