@@ -1,14 +1,17 @@
-var videolink = document.querySelector('#hackaton_video');
-var video = document.querySelector('video');
-// var pix = document.querySelector('img[src="img/hackatonweb6.jpg"]');
-// console.log("link", link);
-// console.log("video", video);
-// console.log("pix", pix);
 
-/* VIDEO ***
+/*
+  *** VIDEO ***
+  Er staat een video naast de foto's
+  In de tekst ernaast staat een tekst-link die de video laat spelen.
+  Hier staan de functies die de video latens pelen of pauzeren
+
   Online croppen,trimmen,exporteren https://online-video-cutter.com
   MOV to MP4 https://www.onlineconverter.com/mov-to-mp4
 */
+var videolink = document.querySelector('#hackaton_video');
+// console.log("videolink", videolink);
+var video = document.querySelector('video');
+// console.log("video", video);
 
 videolink.addEventListener("click",function(){
     // pix.classList.add('hide');
@@ -25,7 +28,10 @@ videolink.addEventListener("click",function(){
     };
 });
 
-/* INTERSECTION OBSERVER ****
+/*
+  *** INTERSECTION OBSERVER ***
+  Als de header uit beeld is, wordt de nav getoond
+
   MDN https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
   https://alligator.io/js/intersection-observer
 */
@@ -35,9 +41,8 @@ const header = document.querySelector('header');
 
 observer = new IntersectionObserver((entry, observer) => {
   // console.log('entry:', entry);
-  // console.log('observer:', observer);
   // console.log("entry.isIntersecting",entry[0].isIntersecting);
-
+  // console.log('observer:', observer);
   if (entry[0].isIntersecting) {
     // console.log('in the view');
     navigatie.classList.remove('show');
