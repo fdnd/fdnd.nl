@@ -1,119 +1,242 @@
-:root {
-  --bg: #333;
-  --red: rgba(255, 0, 0, 1);
-  --mixed: rgba(198, 7, 240, 1);
-  --blue: rgba(0, 212, 255, 1);
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
-html {
-  background-color: #eee;
-}
+
+/*
+  ** BODY **
+  Body en basis settings
+
+  https://www.css-gradient.com
+  background: linear-gradient(to bottom right, #B630B6, #9FD156);
+  background: linear-gradient(to bottom right, #2FB352, #D73C50);
+  background: linear-gradient(to bottom right, #BB4897, #385671);
+*/
+
 body {
-  font-family: 'open sans';
-  font-size: 1.25em;
   margin: 0;
-  display: flex;
-  flex-direction: column;
+  font-family: Sans-Serif;
+  font-size: 1.4em;
+  background: purple;
+  background: linear-gradient(to bottom right, #ffaefd, #2361ec);
+  xbackground: linear-gradient(to bottom right, #b630b6, #9fd156);
+  xbackground: linear-gradient(to bottom right, #2fb352, #d73c50);
+  xbackground: linear-gradient(to bottom right, #bb4897, #385671);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: white;
+  width: 100vw;
   height: 100vh;
-  color: var(--secondary: #333);
-  max-width: 35em;
-  margin: 0 auto;
 }
-body > * {
-  padding: 2em 1em;
+section div:nth-of-type(2),
+header,
+footer {
+  max-width: 32rem;
+  margin: 0 1rem;
+  padding: 2rem;
+}
+
+/*
+  ** NAVIGATIE **
+  Navigatie komt in beeld als de header uit beeld is.
+*/
+nav {
+  position: fixed;
+  width: 100vw;
+  font-size: 0.75em;
+  font-weight: 600;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  background: #ffaefd;
+  background: linear-gradient(to right, #ffaefd, #2361ec);
+  margin-top: -20em;
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}
+nav span {
+  display: block;
+  width: 2.1em;
+  height: 2.1em;
+  font-size: 0.7em;
+  font-size: bold;
+  line-height: 1.3em;
+  padding: 0.4em;
+  margin: 0.5em;
+  border-radius: 50%;
+  background: white;
+  color: purple;
+}
+.show {
+  margin-top: 0;
+  opacity: 1;
+}
+nav a {
+  display: block;
+  color: white;
+  padding: 0.5em;
+  text-decoration: none;
+}
+nav a:hover {
+  background-color: purple;
+}
+nav span {
+  padding: 0.5em;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  display: inline-block;
+  xpadding: 1em;
+}
+
+/*
+  ** HEADER **
+  Header met textueel AD FDND logo
+*/
+
+header {
+  font-size: 1.2em;
+  max-width: 30rem;
+  min-height: 75vh;
+}
+h1 {
+  font-size: 2em;
+  margin: 1rem 0 0 0;
+  position: relative;
+}
+h1 span {
+}
+h1 span[title='HBO Associate Degree'] {
+  content: 'Ad';
+  display: block;
+  width: 2.1em;
+  height: 2.1em;
+  font-size: 0.6em;
+  line-height: 1.3em;
+  padding: 0.4em;
+  border-radius: 50%;
+  background: white;
+  color: purple;
+  mix-blend-mode: screen;
+  position: absolute;
+  top: -0.1em;
+  left: -0.4em;
+}
+h1 span:last-of-type {
+  margin-left: 1.2em;
+}
+
+/*
+  ** Sections **
+  sections met teksten en plaatjes in de main
+*/
+main {
+}
+section {
+  margin: 4em 0 4em 0;
+}
+
+section div:nth-of-type(1) {
+  font-size: 0.8em;
+  top: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100vw;
+  overflow-x: scroll;
+  scroll-snap-type: mandatory;
+}
+section div:nth-of-type(2) {
+  font-size: 1em;
+  line-height: 140%;
+  margin-top: -5em;
+  background: white;
+  color: purple;
+  mix-blend-mode: screen;
+  border-radius: 0.4em;
+}
+section div:nth-of-type(1) img {
+  margin: 0 0.4em 0.4em 0;
+  scroll-snap-align: start;
+}
+section div:nth-of-type(1) p {
+  width: 22rem;
+  flex: 0 0 22rem;
+  color: white;
+  mix-blend-mode: screen;
+  border-radius: 0.3rem;
+  margin: 0;
+  padding: 4em 2.8rem;
+  position: relative;
+}
+section div:nth-of-type(1) p:before {
+  content: '';
+  display: block;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  border: 1.2em white solid;
+  background: purple;
+  mix-blend-mode: screen;
+  position: absolute;
+  top: 3em;
+  left: -1.6em;
+}
+section video {
+  width: 595px;
+  height: 446px;
+}
+.hide {
+  display: none;
+}
+a#hackaton {
+  display: block;
+  margin-top: 0.4em;
 }
 
 a {
-  background-color: var(--mixed);
-  color: #fff;
-  display: block;
-  padding: 0.25em;
-  margin: 0 -0.25em;
-  transition: 0.15s;
-  text-decoration: none;
+  color: purple;
 }
-a:hover {
-  background-color: var(--blue);
-}
-img {
-  max-width: 110%;
-}
-h2 {
-  color: var(--mixed);
-}
-h3 {
-  color: var(--blue);
+p a {
+  color: white;
 }
 
-header {
-  background-color: var(--bg);
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(37, 42, 43, 1) 100%
-  );
-  color: var(--mixed);
-  font-size: 1.5em;
-}
-body > header h1 {
-  font-size: 2em;
-  display: block;
-  margin: 0;
-  font-size: 72px;
-  background: linear-gradient(
-    90deg,
-    var(--red) 0%,
-    var(--mixed) 50%,
-    var(--blue) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-main {
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-}
-main > p {
-  align-self: flex-start;
-}
-
+/*
+  ** FOOTER **
+  met contact info en een hva logo
+*/
 footer {
-  margin-top: auto;
-  display: flex;
-  justify-content: flex-start;
-  background-color: var(--mixed);
+  font-size: 0.8em;
+  line-height: 140%;
+  margin-top: 2em;
+}
+footer a {
+  color: white;
+}
+footer img[title='hva'] {
+  width: 16em;
+  filter: brightness(100);
+  margin: 1em 0;
+}
+footer img[title='cmd'] {
+  display: none;
+  width: 10em;
+  mix-blend-mode: screen;
+  filter: brightness(100);
+  margin: 1em 0;
 }
 
-footer a {
-  text-decoration: underline;
-}
-footer svg {
-  fill: url(#octo-gradient); 
-  color:#eee; 
-  position: absolute; 
-  top: 0; 
-  border: 0; 
-  right: 0;
-}
-.github-corner:hover .octo-arm{
-  animation:octocat-wave 560ms ease-in-out;
-}
-@keyframes octocat-wave{
-  0%, 100% {
-    transform:rotate(0);
-  }
-  20%, 60% {
-    transform:rotate(-25deg);
-  }
-  40%, 80% {
-    transform:rotate(10deg);
+/*
+  ** RESPONISVE **
+*/
+@media all and (min-width: 42em) {
+  section div:nth-of-type(2),
+  header,
+  footer {
+    margin-left: 8rem;
   }
 }
-@media (max-width:500px){
-  .github-corner:hover .octo-arm{
-    animation:none
-  }
-  .github-corner .octo-arm{
-    animation:octocat-wave 560ms ease-in-out
-  }
+@media all and (min-width: 60em) {
 }
