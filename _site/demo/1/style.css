@@ -1,0 +1,249 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/*
+  ** BODY **
+  Body en basis settings
+
+  https://www.css-gradient.com
+  background: linear-gradient(to bottom right, #B630B6, #9FD156);
+  background: linear-gradient(to bottom right, #2FB352, #D73C50);
+  background: linear-gradient(to bottom right, #BB4897, #385671);
+*/
+
+body{
+  margin: 0;
+  font-family: Sans-Serif;
+  font-size: 1.4em;
+  background: purple;
+  background: linear-gradient(to bottom right, #FFAEFD, #2361EC);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+}
+section, header, footer{
+  max-width: 32rem;
+  margin: 0 1rem;
+  padding: 2rem;
+}
+
+/*
+  ** NAVIGATIE **
+  Navigatie komt in beeld als de header uit beeld is.
+
+*/
+nav{
+  position:fixed;
+  width: 100vw;
+  font-size: 0.75em;
+  font-weight:600;
+  top: 0;
+  z-index:2;
+  display: flex;
+  background: #FFAEFD;
+  background: linear-gradient(to right, #FFAEFD, #2361EC);
+  xpadding: 1em;
+  margin-top: -20em;
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}
+nav span{
+  display:block;
+  width:2.1em;
+  height:2.1em;
+  font-size: 0.7em;
+  font-size: bold;
+  line-height: 1.3em;
+  padding: 0.4em 0.2em;
+  margin: 0.5em;
+  border-radius: 50%;
+  background: purple;
+  color: white;
+}
+.show{
+  margin-top:0;
+  opacity: 1;
+}
+nav a{
+  display: block;
+  color: white;
+  padding: 0.5em;
+  text-decoration: none;
+}
+nav a:hover{
+  background-color: purple;
+}
+nav span{
+  padding: 0.5em;
+}
+nav ul{
+  margin: 0;
+  padding: 0;
+}
+nav ul li{
+  display: inline-block;
+  xpadding: 1em;
+}
+
+
+/*
+  ** HEADER **
+  Header met textueel AD FDND logo
+*/
+
+header{
+  font-size: 1.2em;
+  max-width: 30rem;
+  min-height: 75vh;
+  overflow-x: hidden;
+}
+h1{
+  font-size: 2em;
+  margin: 1rem 0 0 0;
+  position: relative;
+}
+h1 span{ }
+h1 span[title="HBO Associate Degree"] {
+  content: "Ad";
+  display:block;
+  width:2.1em;
+  height:2.1em;
+  font-size: 0.6em;
+  line-height: 1.7em;
+  padding: 0.4em;
+  padding-left: 0.5em;
+  border-radius: 50%;
+  background: purple;
+  color: white;
+  mix-blend-mode: screen;
+  position:absolute;
+  top: -0.1em;
+  left: -0.3em;
+}
+h1 span:last-of-type{
+  margin-left: 1.2em;
+}
+
+
+/*
+  ** ARTICLES **
+  Articles met teksten en plaatjes in de main
+*/
+main{}
+article{
+  margin: 4em 0 4em 0;
+}
+article section{
+  font-size: 1em;
+  line-height: 140%;
+  margin-top: -5em;
+  background: white;
+  color: purple;
+  mix-blend-mode: screen;
+  border-radius: 0.4em;
+}
+span.code{
+  display: block;
+}
+article div{
+  font-size: 0.8em;
+  top: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  width:100vw;
+  overflow-x: scroll;
+  scroll-snap-type: mandatory;
+  xscroll-snap-destination: 0% 100%;
+  xscroll-snap-points-x: repeat(100%);
+}
+article div img{
+  margin:0 0.4em 0.4em 0;
+  scroll-snap-align: start;
+}
+article div p {
+  width: 22rem;
+  flex: 0 0 22rem;
+  color: white;
+  mix-blend-mode: screen;
+  border-radius: 0.3rem;
+  margin: 0;
+  padding: 4em 2.8rem;
+  position: relative;
+}
+article div p:before {
+  content: "";
+  display:block;
+  width:0.8rem;
+  height:0.8rem;
+  border-radius: 50%;
+  border: 1.2em white solid;
+  background: purple;
+  mix-blend-mode: screen;
+  position:absolute;
+  top: 3em;
+  left: -1.6em;
+}
+article div video{
+  width: 595px;
+  height: 446px;
+}
+.hide{
+  display: none;
+}
+a#hackathon_video {
+  display: block;
+  margin-top: 0.4em;
+}
+p{ }
+a{
+  color: purple;
+}
+p a{
+  color: white;
+}
+
+/*
+  ** FOOTER **
+  met contact info en een hva logo
+*/
+footer{
+  font-size: 0.8em;
+  line-height: 140%;
+  margin-top: 2em;
+}
+footer a {
+  color: white;
+}
+footer img[title="hva"]{
+  width: 16em;
+  xmix-blend-mode: screen;
+  filter: brightness(100);
+  xfill: white;
+  margin: 1em 0;
+}
+footer img[title="cmd"]{
+  display: none;
+  width: 10em;
+  mix-blend-mode: screen;
+  filter: brightness(100);
+  xfill: white;
+  margin: 1em 0;
+}
+
+/*
+  ** RESPONISVE **
+*/
+@media all and (min-width: 42em) {
+  section, header, footer{
+    margin-left: 8rem;
+  }
+}
+@media all and (min-width: 60em) {
+  article:nth-of-type(2) div{
+      flex-wrap: wrap;
+  }
+}
