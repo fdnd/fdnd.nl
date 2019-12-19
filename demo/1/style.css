@@ -57,11 +57,11 @@ nav span{
   font-size: 0.7em;
   font-size: bold;
   line-height: 1.3em;
-  padding: 0.4em;
+  padding: 0.4em 0.2em;
   margin: 0.5em;
   border-radius: 50%;
-  background: white;
-  color: purple;
+  background: purple;
+  color: white;
 }
 .show{
   margin-top:0;
@@ -98,6 +98,7 @@ header{
   font-size: 1.2em;
   max-width: 30rem;
   min-height: 75vh;
+  overflow-x: hidden;
 }
 h1{
   font-size: 2em;
@@ -111,15 +112,16 @@ h1 span[title="HBO Associate Degree"] {
   width:2.1em;
   height:2.1em;
   font-size: 0.6em;
-  line-height: 1.3em;
+  line-height: 1.7em;
   padding: 0.4em;
+  padding-left: 0.5em;
   border-radius: 50%;
-  background: white;
-  color: purple;
+  background: purple;
+  color: white;
   mix-blend-mode: screen;
   position:absolute;
   top: -0.1em;
-  left: -0.4em;
+  left: -0.3em;
 }
 h1 span:last-of-type{
   margin-left: 1.2em;
@@ -143,6 +145,9 @@ article section{
   mix-blend-mode: screen;
   border-radius: 0.4em;
 }
+span.code{
+  display: block;
+}
 article div{
   font-size: 0.8em;
   top: 0;
@@ -153,7 +158,6 @@ article div{
   scroll-snap-type: mandatory;
   xscroll-snap-destination: 0% 100%;
   xscroll-snap-points-x: repeat(100%);
-
 }
 article div img{
   margin:0 0.4em 0.4em 0;
@@ -189,7 +193,7 @@ article div video{
 .hide{
   display: none;
 }
-a#hackaton_video {
+a#hackathon_video {
   display: block;
   margin-top: 0.4em;
 }

@@ -8,7 +8,7 @@
   Online croppen,trimmen,exporteren https://online-video-cutter.com
   MOV to MP4 https://www.onlineconverter.com/mov-to-mp4
 */
-var videolink = document.querySelector('#hackaton_video');
+var videolink = document.querySelector('#hackathon_video');
 // console.log("videolink", videolink);
 var video = document.querySelector('video');
 // console.log("video", video);
@@ -18,13 +18,13 @@ videolink.addEventListener("click",function(){
     // video.classList.remove('hide');
     if(video.paused){
       video.play();
-      this.textContent="Pauzeer de video van een Frontend Hackaton.";
+      this.textContent="Klik nog een keer om de video te pauzeren.";
     }else{
       video.pause();
-      this.textContent="Speel de video van een Frontend Hackaton.";
+      this.textContent="Bekijk de video van een Frontend Hackathon.";
     }
     video.onended = (event) => {
-      this.textContent="Bekijk de video van een Frontend Hackaton nog een keer.";
+      this.textContent="Bekijk de video van een Frontend Hackathon nog een keer.";
     };
 });
 
