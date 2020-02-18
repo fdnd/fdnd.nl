@@ -19,9 +19,6 @@ body {
   font-size: 1.4em;
   background: purple;
   background: linear-gradient(to bottom right, #ffaefd, #2361ec);
-  xbackground: linear-gradient(to bottom right, #b630b6, #9fd156);
-  xbackground: linear-gradient(to bottom right, #2fb352, #d73c50);
-  xbackground: linear-gradient(to bottom right, #bb4897, #385671);
   background-attachment: fixed;
   background-repeat: no-repeat;
   color: white;
@@ -64,8 +61,8 @@ nav span {
   padding: 0.4em;
   margin: 0.5em;
   border-radius: 50%;
-  background: white;
-  color: purple;
+  background: purple;
+  color: white;
 }
 .show {
   margin-top: 0;
@@ -110,17 +107,18 @@ h1 {
 h1 span {
 }
 h1 span[title='HBO Associate Degree'] {
-  content: 'Ad';
+  /content: 'Ad';
   display: block;
   width: 2.1em;
   height: 2.1em;
   font-size: 0.6em;
   line-height: 1.3em;
-  padding: 0.4em;
+  padding-top: 0.6em;
+  padding-left: 0.5em;
   border-radius: 50%;
-  background: white;
-  color: purple;
-  mix-blend-mode: screen;
+  background: purple;
+  color: white;
+  /mix-blend-mode: screen;
   position: absolute;
   top: -0.1em;
   left: -0.4em;
@@ -179,7 +177,7 @@ section div:nth-of-type(1) p:before {
   border-radius: 50%;
   border: 1.2em white solid;
   background: purple;
-  mix-blend-mode: screen;
+  /mix-blend-mode: screen;
   position: absolute;
   top: 3em;
   left: -1.6em;
@@ -187,6 +185,8 @@ section div:nth-of-type(1) p:before {
 section video {
   width: 595px;
   height: 446px;
+  background: white;
+  color: purple;
 }
 .hide {
   display: none;
@@ -198,6 +198,10 @@ a#hackaton {
 
 a {
   color: purple;
+}
+a:hover, a:focus{
+    background: purple;
+    color: white;
 }
 p a {
   color: white;
