@@ -1,6 +1,9 @@
 body > header {
     padding-top: 4.5rem
 }
+body > header > h1 > span {
+    display:none;
+}
 
 body > header p {
     line-height: 1.5
