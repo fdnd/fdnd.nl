@@ -848,9 +848,13 @@ details {
         margin-top: 1.5rem;
     }
 
-    p {
+    .p {
         padding: 1rem 1.25rem 0;
 
+    }
+    .button {
+        display: block;
+        width: max-content;
     }
 
     summary {
