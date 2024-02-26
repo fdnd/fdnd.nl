@@ -851,5 +851,5 @@ details {
 
 
 .creating-tomorrow {
-    padding: var(--padding-side) var(--padding-side) 1.5rem;
+    padding: var(--padding-side) 0 1.5rem;
 }
