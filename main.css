@@ -41,7 +41,8 @@ a {
 
 /* Basics */
 
-html,body {
+html,
+body {
     scroll-behavior: smooth;
 }
 
@@ -57,9 +58,7 @@ body {
 }
 
 
-.caps {
-    text-transform: uppercase;
-}
+
 
 /* Typo */
 .font-bold {
@@ -109,13 +108,13 @@ body {
 
 
 .large-body {
-    font-size: clamp(1.2rem, calc(18 / 60 * var(--grid-1)), 1.5rem);
+    font-size: clamp(1rem, calc(18 / 60 * var(--grid-1)), 1.5rem);
     letter-spacing: -0.04em;
     line-height: 1.5;
 }
 
 .medium-body {
-    font-size: clamp(1rem, calc(16 / 60 * var(--grid-1)), 1.25rem);
+    font-size: clamp(0.875rem, calc(16 / 60 * var(--grid-1)), 1.25rem);
     letter-spacing: -0.04em;
     line-height: 1.5;
 }
@@ -124,6 +123,11 @@ body {
     font-size: clamp(0.75rem, calc(14 / 60 * var(--grid-1)), 1.125rem);
     letter-spacing: -0.04em;
     line-height: 1.5;
+}
+
+.caps {
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
 }
 
 /* Spacing */
@@ -135,12 +139,15 @@ body {
 
     font-size: clamp(1rem, calc(18 / 60 * var(--grid-1)), 1.5rem);
     letter-spacing: -0.03em;
+
     .medium-heading {
-        
-        + p, + details {
+
+        +p,
+        +details {
             margin-top: 1.1em;
         }
     }
+
     .large-heading {
         +p {
             margin-top: 1.1em;
@@ -158,11 +165,17 @@ body {
     p+.button-row,
     p+.button {
         margin-top: 2.5rem;
+        @media (max-width: 750px) {
+            margin-top: 1.5rem;
+        }
     }
 
-    .button-row+p,
-    .button+p {
-        margin-top: 2.5rem;
+    .button-row + p,
+    .button + p {
+        margin-top: 2rem;
+        @media (max-width: 750px) {
+            margin-top: 1rem;
+        }
     }
 }
 
@@ -289,6 +302,7 @@ HEADER
     overflow: hidden;
 
     @media (max-width: 750px) {
+        overflow: visible;
         padding-bottom: 1rem;
     }
 
@@ -485,6 +499,10 @@ HEADER
                 right: -50vw;
                 bottom: 0;
                 background-color: var(--background);
+
+                @media (max-width: 870px) {
+                    content: unset;
+                }
             }
         }
 
@@ -561,7 +579,7 @@ PAGE HEADER
 
     .page-header-image {
         width: 100%;
-        height: clamp(30rem, calc(100vw / 24 * 610 / 60), 51rem);
+        height: clamp(20rem, calc(100vw / 24 * 610 / 60), 51rem);
         border-radius: var(--radius);
         overflow: hidden;
     }
@@ -611,14 +629,14 @@ PAGE HEADER
 
     @media (max-width: 750px) {
 
-        .page-header-text,
-        .page-header-meta {
+        .page-header-text {
             position: relative;
             padding: 0 1rem 1rem 0;
         }
-
+        
         .page-header-meta {
-            padding: 1rem 1rem 1rem 0;
+            position: relative;
+            padding: 1rem 1rem 0 0;
         }
 
         .page-header-text h1 {
@@ -705,6 +723,7 @@ IMAGE WITH TEXT
             --width: calc(var(--grid-1) * 10.5);
             --max-width: 880px;
             height: calc(var(--width) * var(--ratio));
+
             @media (max-width: 750px) {
                 --width: calc(100vw - var(--padding-side));
             }
@@ -813,34 +832,40 @@ IMAGE WITH TEXT
     max-width: var(--max-width);
     margin: 0 auto;
     padding: var(--padding-side) var(--padding-side) 0 calc(var(--padding-side) * 2);
+
     .inner {
         max-width: 800px;
         margin: auto;
     }
+
     @media (max-width: 1024px) {
         padding: 4rem var(--padding-side) 0;
     }
 }
 
 details {
-    & + details {
+    &+details {
         margin-top: 1.5rem;
     }
+
     p {
         padding: 1rem 1.25rem 0;
 
     }
+
     summary {
         padding: 1.25rem;
         border: 1px solid currentColor;
         border-radius: var(--small-radius);
         transition: background 0.3s ease-out, color 0.3s ease-out;
         cursor: pointer;
+
         &:hover {
             background-color: var(--blue-50);
             color: var(--background);
         }
     }
+
     &[open] {
         summary {
             background: var(--color);
@@ -851,5 +876,5 @@ details {
 
 
 .creating-tomorrow {
-    padding: var(--padding-side) 0 1.5rem;
+    padding: 5rem 0 1.5rem;
 }
