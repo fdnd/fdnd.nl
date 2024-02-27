@@ -402,10 +402,10 @@ HEADER
 
 }
 
-.fdnd-logo  svg {
-        height: 100%;
-        width: auto;
-    }
+.fdnd-logo svg {
+    height: 100%;
+    width: auto;
+}
 
 .nav-button {
     display: none;
