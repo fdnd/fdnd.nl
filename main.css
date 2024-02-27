@@ -1,3 +1,24 @@
+@font-face {
+    src:
+        url("/assets/fonts/Open Sans/OpenSans.woff2") format("woff2"),
+        url("/assets/fonts/Open Sans/OpenSans.woff") format("woff"),
+        url("/assets/fonts/Open Sans/OpenSans.ttf") format("truetype");
+    font-family: "Open Sans";
+    font-weight: 300 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-style: italic;
+    src:
+        url("/assets/fonts/Open Sans/OpenSans-Italic.woff2") format("woff2"),
+        url("/assets/fonts/Open Sans/OpenSans-Italic.woff") format("woff"),
+        url("/assets/fonts/Open Sans/OpenSans-Italic.ttf") format("truetype");
+    font-family: "Open Sans";
+    font-weight: 300 800;
+    font-display: swap;
+}
+
 :root {
     --grey: #ECECEC;
     --purple: #A675F5;
@@ -49,7 +70,7 @@ body {
 body {
     background: var(--background);
     color: var(--color);
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', system-ui, sans-serif;
 }
 
 .sr-only {
