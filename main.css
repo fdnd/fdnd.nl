@@ -208,9 +208,7 @@ body {
 }
 
 figcaption span {
-    span {
-        display: block;
-    }
+    display: block;
 }
 
 /* Buttons */
