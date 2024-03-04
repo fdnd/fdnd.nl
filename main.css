@@ -321,13 +321,23 @@ HEADER
     gap: 1.75rem;
     flex-wrap: wrap;
     align-items: center;
-    width: 100%;
-
+    width: calc(100% - 3rem - var(--padding-side));
 }
+
+.header .insta {
+    margin-right: var(--padding-side);
+}
+
 
 @media (max-width: 870px) {
     .top-header {
         width: max-content;
+        align-items: center;
+    }
+    .header .insta {
+        margin-right: 0;
+        margin-left: auto;
+        align-self: center;
     }
 }
 
@@ -336,6 +346,11 @@ HEADER
         flex-direction: column;
         align-items: flex-start;
         gap: 0.5rem;
+    }
+    .header .insta {
+        order: 1;
+        margin-left: 0;
+        margin-right: 1rem;
     }
 }
 
@@ -386,7 +401,7 @@ HEADER
 
 @media (max-width: 750px) {
     .mobile-right {
-        width: 100%;
+        width: calc(100% - 6rem);
         justify-content: space-between;
     }
 }
@@ -836,7 +851,6 @@ IMAGE WITH TEXT
 
 .cta-row {
     --button-color: var(--accent-color-2);
-    background-color: var(--accent-color-2);
     margin-top: var(--padding-side);
 }
 
@@ -851,22 +865,27 @@ IMAGE WITH TEXT
     flex-wrap: wrap;
     max-width: var(--max-width);
     margin: auto;
-    gap: calc(var(--padding-side) * 2);
-    padding: var(--padding-side) calc(var(--padding-side) * 2);
+    gap: var(--padding-side);
+    padding: var(--padding-side);
 
-}
-
-@media (max-width: 1024px) {
-    .cta-row .inner {
-        padding: 3rem var(--padding-side);
-        gap: calc(var(--padding-side) * 3) var(--padding-side);
-    }
 }
 
 .cta {
-    width: 25%;
+    background-color: var(--accent-color-2);
+    width: 20%;
     flex-grow: 1;
+    padding: calc(var(--padding-side) / 2);
+    max-width: calc((100% - var(--padding-side)) / 2);
     min-width: min-content;
+    border-radius: 0.5rem;
+}
+
+@media (max-width: 750px) {
+    .cta {
+        width: 100%;
+        max-width: unset;
+        padding: 1.5rem;
+    }
 }
 
 .cta p {
@@ -876,8 +895,6 @@ IMAGE WITH TEXT
 .cta .button {
     width: max-content;
 }
-
-
 
 .simple-text {
     max-width: var(--max-width);
@@ -930,5 +947,54 @@ details summary:hover {
 
 
 .creating-tomorrow {
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
     padding: 5rem 0 1.5rem;
 }
+
+.insta {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.insta svg {
+    width: 100%;
+    height: auto;
+    fill: currentColor;
+}
+
+
+
+/* 
+.portfolio {
+    overflow: hidden;
+    background: var(--accent-color-1);
+    max-width: var(--max-width);
+    margin: var(--padding-side) auto 0;
+    padding: var(--padding-side) var(--padding-side) var(--padding-side) calc(var(--padding-side) * 2);
+}
+
+.portfolio-items {
+    display: flex;
+    width: max-content;
+    overflow: scroll;
+    gap: 5%;
+    margin-top: calc(var(--padding-side) / 2);
+}
+
+.portfolio-item {
+    width: 20vw;
+    background-color: var(--background);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.portfolio-item video, .portfolio-item img {
+    width: 100%;
+} */
