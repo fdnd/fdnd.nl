@@ -73,7 +73,7 @@ body {
 body {
     background: var(--background);
     color: var(--color);
-    font-family: 'Open Sans', system-ui, sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .sr-only {
