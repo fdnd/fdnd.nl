@@ -115,6 +115,16 @@ main {
     margin: 0 calc(var(--radius) / 2);
     padding-bottom: var(--padding-side);
 }
+main::after {
+    content: '';
+    position: fixed;
+    bottom: calc(var(--radius) / 2);
+    right: calc(var(--radius) / 2);
+    width: calc(var(--radius));
+    height: calc(var(--radius));
+    border-radius: var(--radius);
+    box-shadow: calc(var(--radius) / 2) calc(var(--radius) / 2) 0 0 var(--accent-color-1);
+}
 @media (max-width: 750px) {
     main {
         z-index: 1;
@@ -727,7 +737,13 @@ Fixed button
     bottom: 0;
     right: 0;
     z-index: 10;
-    align-items: flex-end;
+    transition: transform 0.5s ease-out;
+}
+.fixed-button.is-down {
+    transform: translateY(100%);
+    
+}
+.fixed-button .inner {
     padding: 1.5rem;
     background-color: var(--accent-color-1);
     border-radius: var(--radius) 0 0 0;
@@ -743,7 +759,7 @@ Fixed button
     width: max-content;
 }
 
-.fixed-button::before {
+.fixed-button .inner::before {
     content: '';
     position: absolute;
     left: calc(var(--radius) * -1);
@@ -753,7 +769,7 @@ Fixed button
     border-radius: var(--radius);
     box-shadow: calc(var(--radius) / 2) calc(var(--radius) / 2) 0 0 var(--accent-color-1);
 }
-.fixed-button::after {
+.fixed-button .inner::after {
     content: '';
     position: absolute;
     right: calc(var(--radius) / 2);

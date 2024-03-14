@@ -34,3 +34,36 @@ const animateRadiiIn = () => {
 }
 
 window.requestAnimationFrame(animateRadiiIn)
+
+
+// Scrolling functions
+const fixedButton = document.querySelector('.fixed-button')
+const delta = 5
+
+let scrolled
+let lastItem
+
+let lastScrollTop = 0
+let scrollDistance = 100
+
+window.addEventListener('scroll', () => {
+  scrolled = true
+})
+
+setInterval(() => {
+  if (scrolled) {
+    scrollHandler()
+    scrolled = false
+  }
+}, 250)
+
+function scrollHandler() {
+  const scrollTop = window.scrollY || document.documentElement.scrollTop
+  if (Math.abs(lastScrollTop - scrollTop) <= delta) return
+  if (scrollTop > lastScrollTop && scrollTop > scrollDistance) {
+    fixedButton.classList.add('is-down')
+  } else if (scrollTop < lastScrollTop) {
+    fixedButton.classList.remove('is-down')
+  }
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop
+}
