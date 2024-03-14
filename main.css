@@ -954,8 +954,8 @@ IMAGE WITH TEXT
 }
 
 .image-with-text.is-reversed .image-container {
-    --width: calc(var(--grid-1) * 10.5);
-    --max-width: 880px;
+    --width: calc(var(--grid-1) * 10);
+    --max-width: 800px;
     height: calc(var(--width) * var(--ratio));
 
 }
