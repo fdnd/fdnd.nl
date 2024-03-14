@@ -167,7 +167,7 @@ main::after {
 .medium-heading {
     font-size: clamp(1.5rem, calc(40 / 60 * var(--grid-1)), 3.25rem);
     letter-spacing: -0.05em;
-    line-height: 1;
+    line-height: 1.1;
 }
 
 .small-heading {
