@@ -41,6 +41,11 @@
         --radius: 1.5rem !important;
     }
 }
+@media (prefers-reduced-motion) and (max-width: 750px) {
+    body, :root {
+        --radius: 1rem !important;
+    }
+}
 /* Reset */
 
 * {
