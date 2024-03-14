@@ -33,6 +33,7 @@
     :root {
         /* Animated to 1 in js: */
         --radius: 0.25rem;
+        --section-width: calc(100vw - 1rem);
     }
 }
 
