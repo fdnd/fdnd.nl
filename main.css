@@ -4,10 +4,7 @@
     font-weight: 300 800;
     font-stretch: 100%;
     font-display: swap;
-    src:
-        url("/assets/fonts/Open Sans/OpenSans.woff2") format("woff2"),
-        url("/assets/fonts/Open Sans/OpenSans.woff") format("woff"),
-        url("/assets/fonts/Open Sans/OpenSans.ttf") format("truetype");
+    src: url("/assets/fonts/Open Sans/OpenSans.woff2") format("woff2");
 }
 
 @font-face {
@@ -16,10 +13,7 @@
     font-weight: 300 800;
     font-stretch: 100%;
     font-display: swap;
-    src:
-        url("/assets/fonts/Open Sans/OpenSans-Italic.woff2") format("woff2"),
-        url("/assets/fonts/Open Sans/OpenSans-Italic.woff") format("woff"),
-        url("/assets/fonts/Open Sans/OpenSans-Italic.ttf") format("truetype");
+    src: url("/assets/fonts/Open Sans/OpenSans-Italic.woff2") format("woff2");
 }
 
 :root {
