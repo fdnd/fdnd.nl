@@ -22,10 +22,10 @@
     --section-width: calc(100vw - 3rem);
     --max-width: 117rem;
     /* Animated to 1.5 in js: */
-    --radius: 0.5rem; 
-    
+    --radius: 0.5rem;
+
     --calc-side: calc((100vw - var(--max-width)) / 2);
-    
+
 }
 
 
@@ -38,15 +38,21 @@
 }
 
 @media (prefers-reduced-motion) {
-    body, :root {
+
+    body,
+    :root {
         --radius: 1.5rem !important;
     }
 }
+
 @media (prefers-reduced-motion) and (max-width: 750px) {
-    body, :root {
+
+    body,
+    :root {
         --radius: 1rem !important;
     }
 }
+
 /* Reset */
 
 * {
@@ -115,6 +121,7 @@ main {
     margin: 0 calc(var(--radius) / 2);
     padding-bottom: var(--padding-side);
 }
+
 main::after {
     content: '';
     position: fixed;
@@ -125,10 +132,12 @@ main::after {
     border-radius: var(--radius);
     box-shadow: calc(var(--radius) / 2) calc(var(--radius) / 2) 0 0 var(--accent-color-1);
 }
+
 @media (max-width: 750px) {
     main {
         z-index: 1;
     }
+
     header {
         z-index: 12;
     }
@@ -217,13 +226,15 @@ main::after {
 }
 
 .p .medium-heading+p,
-.p .medium-heading+details {
+.p .medium-heading+details,
+.p .small-heading+p {
     margin-top: 1.1em;
-
 }
 
-.p .large-heading+p {
-    margin-top: 1.1em;
+.p p + .medium-heading,
+.p details + .medium-heading,
+.p p + .small-heading {
+    margin-top: 1.5em;
 }
 
 .p p+p {
@@ -247,6 +258,16 @@ main::after {
 .p .large-body+.button {
     margin-top: 1em;
 
+}
+
+.p .button + p,
+.p .button + h1,
+.p .button + h2,
+.p .button + h3,
+.p .button + h4,
+.p .button + h5,
+.p .button + h6 {
+    margin-top: 2em;
 }
 
 @media (max-width: 750px) {
@@ -424,7 +445,7 @@ HEADER
         width: max-content;
         align-items: center;
     }
-    
+
     .header .insta {
         margin-right: 0;
         margin-left: auto;
@@ -438,7 +459,7 @@ HEADER
         align-items: flex-start;
         gap: 0.5rem;
     }
-    
+
     .header .insta {
         order: 1;
         margin-left: 0;
@@ -533,7 +554,7 @@ HEADER
 }
 
 .nav-button:hover span {
-        transform: translate(-1px, 1px);
+    transform: translate(-1px, 1px);
 }
 
 .nav-button span {
@@ -576,7 +597,7 @@ HEADER
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 1rem;
-    
+
 }
 
 .nav-list {
@@ -598,6 +619,7 @@ HEADER
 }
 
 @media (prefers-reduced-motion) {
+
     .nav-list,
     .fixed-button {
         transform: none !important;
@@ -641,12 +663,16 @@ HEADER
 }
 
 @media (min-width: 1920px) {
-    .top-header, .fdnd-logo {
+
+    .top-header,
+    .fdnd-logo {
         margin-left: var(--calc-side);
     }
+
     .nav-list {
         padding-right: calc(var(--calc-side) + var(--padding-side));
     }
+
     .header .insta {
         margin-right: calc(var(--padding-side) + var(--calc-side));
     }
@@ -690,6 +716,7 @@ HEADER
     .nav-list::before {
         content: unset;
     }
+
     .nav-item a {
         opacity: 0;
         transform: translateY(100%);
@@ -739,10 +766,12 @@ Fixed button
     z-index: 10;
     transition: transform 0.5s ease-out;
 }
+
 .fixed-button.is-down {
     transform: translateY(100%);
-    
+
 }
+
 .fixed-button .inner {
     padding: 1.5rem;
     background-color: var(--accent-color-1);
@@ -769,6 +798,7 @@ Fixed button
     border-radius: var(--radius);
     box-shadow: calc(var(--radius) / 2) calc(var(--radius) / 2) 0 0 var(--accent-color-1);
 }
+
 .fixed-button .inner::after {
     content: '';
     position: absolute;
@@ -816,7 +846,7 @@ PAGE HEADER
 .page-header-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;    
+    object-fit: cover;
 }
 
 .page-header-text {
@@ -1082,6 +1112,12 @@ CTA ROW
     width: max-content;
 }
 
+/*
+======================
+SIMPLE TEXT
+======================
+*/
+
 .simple-text {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -1093,10 +1129,29 @@ CTA ROW
     margin: auto;
 }
 
+.simple-text p {
+    max-width: 60ch;
+}
+
 @media (max-width: 1024px) {
     .simple-text {
         padding: 4rem var(--padding-side) 0;
     }
+}
+
+details {
+    border: 1px solid currentColor;
+    border-radius: var(--small-radius);
+    overflow: hidden;
+}
+
+details:nth-of-type(odd) {
+    --active-color: var(--accent-color-1);
+    --active-text-color: var(--color);
+}
+details:nth-of-type(even) {
+    --active-color: var(--accent-color-2);
+    --active-text-color: var(--color);
 }
 
 details+details {
@@ -1104,8 +1159,7 @@ details+details {
 }
 
 details .p {
-    padding: 1rem 1.25rem 0;
-
+    padding: 1rem 1.25rem;
 }
 
 details .button {
@@ -1115,21 +1169,60 @@ details .button {
 
 details summary {
     padding: 1.25rem;
-    border: 1px solid currentColor;
-    border-radius: var(--small-radius);
     transition: background 0.3s ease-out, color 0.3s ease-out;
     cursor: pointer;
 }
 
-details summary:hover {
-    background-color: var(--blue-50);
-    color: var(--background);
+details[open] summary {
+    background: var(--active-color);
+    color: var(--active-text-color);
 }
 
-details[open] summary {
-    background: var(--color);
-    color: var(--background);
+/*
+======================
+Program
+======================
+*/
+
+.open-avond-program {
+    width: var(--section-width);
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 4rem var(--padding-side) 0;
 }
+
+.open-avond-program-list {
+    padding: 0;
+    margin-top: 2rem;
+    border: 1px solid var(--accent-color-1);
+    padding: 1rem;
+    border-radius: var(--small-radius);
+}
+
+.open-avond-program-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 2rem;
+}
+.open-avond-program-item + .open-avond-program-item {
+margin-top: 2rem;
+}
+
+.open-avond-program-item:nth-child(2) {
+    border-bottom: 1px solid var(--accent-color-1);
+    padding-bottom: 2rem;
+}
+
+.open-avond-program-list p + p {
+    margin-top: 0;
+}
+
+.open-avond-program .button {
+    width: max-content;
+    margin-top: 1rem;
+}
+
 
 .footer-bottom {
     display: flex;
@@ -1150,33 +1243,3 @@ details[open] summary {
     height: auto;
     fill: currentColor;
 }
-
-
-
-/* 
-.portfolio {
-    overflow: hidden;
-    background: var(--accent-color-1);
-    max-width: var(--max-width);
-    margin: var(--padding-side) auto 0;
-    padding: var(--padding-side) var(--padding-side) var(--padding-side) calc(var(--padding-side) * 2);
-}
-
-.portfolio-items {
-    display: flex;
-    width: max-content;
-    overflow: scroll;
-    gap: 5%;
-    margin-top: calc(var(--padding-side) / 2);
-}
-
-.portfolio-item {
-    width: 20vw;
-    background-color: var(--background);
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-}
-
-.portfolio-item video, .portfolio-item img {
-    width: 100%;
-} */

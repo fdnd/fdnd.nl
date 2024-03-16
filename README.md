@@ -8,3 +8,5 @@ We're a team of faculty at the Amsterdam University of Applied Sciences (AUAS) u
 ![GNU GPL V3](https://www.gnu.org/graphics/gplv3-127x51.png)
 
 This work is licensed under [GNU GPLv3](./LICENSE).
+
+
