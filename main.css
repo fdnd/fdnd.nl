@@ -1204,16 +1204,22 @@ Program
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
-    gap: 2rem;
+    gap: 0.2rem 2rem;
+}
+@media (max-width: 750px) {
+    .open-avond-program-item p {
+        width: 100%;
+    }
+
 }
 
 .open-avond-program-item+.open-avond-program-item {
-    margin-top: 2rem;
+    margin-top: 1.25em;
 }
 
 .open-avond-program-item:nth-child(2) {
     border-bottom: 1px solid var(--accent-color-1);
-    padding-bottom: 2rem;
+    padding-bottom: 1.25em;
 }
 
 .open-avond-program-list p+p {
