@@ -105,7 +105,7 @@ body::after {
     height: calc(var(--radius));
     border-radius: var(--radius);
     z-index: 11;
-    box-shadow: calc(var(--radius) / -2) calc(var(--radius) / 2) 0 0 var(--accent-color-1);
+    box-shadow: calc(var(--radius) / -2) calc(var(--radius) / 2) 0 0 var(--color);
 }
 
 .sr-only {
@@ -130,7 +130,7 @@ main::after {
     width: calc(var(--radius));
     height: calc(var(--radius));
     border-radius: var(--radius);
-    box-shadow: calc(var(--radius) / 2) calc(var(--radius) / 2) 0 0 var(--accent-color-1);
+    box-shadow: calc(var(--radius) / 2) calc(var(--radius) / 2) 0 0 var(--color);
 }
 
 @media (max-width: 750px) {
