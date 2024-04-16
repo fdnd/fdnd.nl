@@ -75,7 +75,7 @@ body {
 }
 
 html {
-    background-color: var(--accent-color-1);
+    background-color: var(--color);
 }
 
 body {
@@ -90,7 +90,7 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    border: calc(var(--radius) / 2) solid var(--accent-color-1);
+    border: calc(var(--radius) / 2) solid var(--color);
     border-top: none;
     z-index: 12;
     pointer-events: none;
@@ -238,7 +238,7 @@ main::after {
 }
 
 .p p+p {
-    margin-top: 1.1em;
+    margin: 1.1em 0;
 }
 
 .p p+.large-body {
@@ -251,13 +251,7 @@ main::after {
 
 .p p+.button-row,
 .p p+.button {
-    margin-top: 2.5rem;
-}
-
-.p .large-body+.button-row,
-.p .large-body+.button {
-    margin-top: 1em;
-
+    margin-top: auto;
 }
 
 .p .button+p,
@@ -412,7 +406,7 @@ HEADER
 
 .header {
     position: relative;
-    background-color: var(--accent-color-1);
+    background-color: var(--color);
     color: var(--background);
     padding: 1.5rem 0 0 var(--padding-side);
 }
@@ -774,7 +768,7 @@ Fixed button
 
 .fixed-button .inner {
     padding: 1.5rem;
-    background-color: var(--accent-color-1);
+    background-color: var(--color);
     border-radius: var(--radius) 0 0 0;
     animation: up 0.4s 0.4s ease-out forwards;
     transform: translateY(100%);
@@ -788,7 +782,8 @@ Fixed button
     width: max-content;
 }
 
-.fixed-button .inner::before {
+.fixed-button .inner::before,
+.fixed-button .inner::after {
     content: '';
     position: absolute;
     left: calc(var(--radius) * -1);
@@ -796,18 +791,14 @@ Fixed button
     width: var(--radius);
     height: var(--radius);
     border-radius: var(--radius);
-    box-shadow: calc(var(--radius) / 2) calc(var(--radius) / 2) 0 0 var(--accent-color-1);
+    box-shadow: calc(var(--radius) / 2) calc(var(--radius) / 2) 0 0 var(--color);
 }
 
 .fixed-button .inner::after {
-    content: '';
-    position: absolute;
     right: calc(var(--radius) / 2);
     top: calc(var(--radius) / -1);
-    width: var(--radius);
-    height: var(--radius);
-    border-radius: var(--radius);
-    box-shadow: calc(var(--radius) / 2) calc(var(--radius) / 2) 0 0 var(--accent-color-1);
+    left:auto;
+    bottom:auto;
 }
 
 /*
@@ -1094,6 +1085,8 @@ CTA ROW
     max-width: calc((100% - var(--padding-side)) / 2);
     min-width: min-content;
     border-radius: 0.5rem;
+    display:flex;
+    flex-direction:column;
 }
 
 @media (max-width: 750px) {
