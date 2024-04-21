@@ -80,16 +80,8 @@ html {
 }
 
 body {
-    --window-licking:.5rem;
     color: var(--color);
     font-family: 'Open Sans', sans-serif;
-    padding:0 var(--window-licking);
-}
-
-@media (min-width:40em) {
-    body {
-        --window-licking:1rem
-    }
 }
 
 body::before {
