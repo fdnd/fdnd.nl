@@ -33,8 +33,8 @@
 @media (max-width: 750px) {
     :root {
         /* Animated to 1 in js: */
-        --radius: 0.25rem;
-        --section-width: calc(100vw - 1rem);
+        --radius: 0.5rem;
+        --section-width: calc(100vw - 2rem);
     }
 }
 
@@ -76,12 +76,7 @@ body {
 }
 
 html {
-    background-color: var(--color);
-    background-image: linear-gradient(
-      var(--angle) in oklch,
-      oklch(66.85% 0.186 298.97) 20%,
-      oklch(18.6% 0.109 269.13) 100%
-    );
+    background-color: var(--blue);
 }
 
 body {
@@ -104,22 +99,10 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    /border: calc(var(--radius) / 2) solid var(--color);
-    border-top: none;
+    border-left: calc(var(--radius)) solid var(--blue);
+    border-right: calc(var(--radius)) solid var(--blue);
     z-index: 12;
     pointer-events: none;
-}
-
-body::after {
-    content: '';
-    position: fixed;
-    bottom: calc(var(--radius) / 2);
-    left: calc(var(--radius) / 2);
-    width: calc(var(--radius));
-    height: calc(var(--radius));
-    border-radius: var(--radius);
-    z-index: 11;
-    /* box-shadow: calc(var(--radius) / -2) calc(var(--radius) / 2) 0 0 var(--color); */
 }
 
 .sr-only {
@@ -132,20 +115,20 @@ main {
     z-index: 11;
     background: var(--background);
     border-radius: var(--radius);
-    margin: 0 calc(var(--radius) / 2);
+    margin: 0 calc(var(--radius));
     padding-bottom: var(--padding-side);
 }
 
-/* main::after {
+main::after {
     content: '';
     position: fixed;
-    bottom: calc(var(--radius) / 2);
-    right: calc(var(--radius) / 2);
+    bottom: calc(var(--radius));
+    right: calc(var(--radius));
     width: calc(var(--radius));
     height: calc(var(--radius));
     border-radius: var(--radius);
-    box-shadow: calc(var(--radius) / 2) calc(var(--radius) / 2) 0 0 var(--color);
-} */
+    box-shadow: calc(var(--radius)) calc(var(--radius)) 0 0 var(--blue);
+}
 
 @media (max-width: 750px) {
     main {
@@ -423,7 +406,7 @@ HEADER
 
 .header {
     position: relative;
-    /* background-color: var(--color); */
+    background-color: var(--blue);
     color: var(--background);
     padding: 1.5rem 0 0 var(--padding-side);
 }
@@ -621,8 +604,8 @@ HEADER
     list-style: none;
     background: var(--background);
     color: var(--color);
-    margin-right: calc(var(--radius) / 2);
-    max-width: calc(100% - var(--radius) * 1.25);
+    margin-right: calc(var(--radius));
+    max-width: calc(100% - var(--radius) * 2.25);
     margin-left: auto;
     box-shadow: 0 calc(var(--radius) * 2) 0 0 var(--background);
     transform: translateY(100%);
@@ -646,6 +629,7 @@ HEADER
 @media (max-width: 870px) {
     .nav-list {
         flex-grow: 1;
+        padding-right: 1.25rem;
     }
 }
 
@@ -786,39 +770,44 @@ Fixed button
     color:var(--grey)
 }
 .fixed-button .inner {
-    padding: 1rem;
-    background-color: var(--color);
-    border-radius: var(--radius);
+    padding: 1.5rem 1.75rem 1.75rem 1.5rem;
+    background-color: var(--blue);
+    border-radius: var(--radius) 0 0 0;
     animation: up 0.4s 0.4s ease-out forwards;
     transform: translateY(100%);
 }
 
 .fixed-button p {
     margin-bottom: 0.3em;
+    color: var(--background);
 }
 
 .fixed-button .button {
     width: max-content;
 }
 
-/* .fixed-button .inner::before,
+.fixed-button .inner::before,
 .fixed-button .inner::after {
     content: '';
     position: absolute;
     left: calc(var(--radius) * -1);
-    bottom: calc(var(--radius) / 2);
+    bottom: calc(var(--radius));
     width: var(--radius);
     height: var(--radius);
     border-radius: var(--radius);
-    box-shadow: calc(var(--radius) / 2) calc(var(--radius) / 2) 0 0 var(--color);
+    box-shadow: calc(var(--radius)) calc(var(--radius)) 0 0 var(--blue);
 }
 
 .fixed-button .inner::after {
-    right: calc(var(--radius) / 2);
-    top: calc(var(--radius) / -1);
-    left:auto;
-    bottom:auto;
-} */
+    content: '';
+    position: absolute;
+    right: calc(var(--radius));
+    top: calc(var(--radius) * -1);
+    width: var(--radius);
+    height: var(--radius);
+    border-radius: var(--radius);
+    box-shadow: calc(var(--radius)) calc(var(--radius)) 0 0 var(--accent-color-1);
+}
 
 /*
 ======================
@@ -1243,6 +1232,13 @@ Program
     margin-top: 1rem;
 }
 
+footer {
+    color: var(--background)
+}
+
+footer .button {
+    color: var(--color);
+}
 
 .footer-bottom {
     display: flex;
