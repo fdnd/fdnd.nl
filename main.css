@@ -5,6 +5,7 @@
     --blue-50: rgba(5, 5, 66, 0.5);
     --green: #66E5BF;
     --yellow: #FFFC86;
+    --angle: 42deg;
 
     --background: var(--grey);
     --color: var(--blue);
@@ -79,8 +80,16 @@ html {
 }
 
 body {
+    --window-licking:.5rem;
     color: var(--color);
     font-family: 'Open Sans', sans-serif;
+    padding:0 var(--window-licking);
+}
+
+@media (min-width:40em) {
+    body {
+        --window-licking:1rem
+    }
 }
 
 body::before {
@@ -118,7 +127,7 @@ main::after {
     width: calc(var(--radius));
     height: calc(var(--radius));
     border-radius: var(--radius);
-    box-shadow: calc(var(--radius)) calc(var(--radius)) 0 0 var(--accent-color-1);
+    box-shadow: calc(var(--radius)) calc(var(--radius)) 0 0 var(--blue);
 }
 
 @media (max-width: 750px) {
@@ -226,7 +235,7 @@ main::after {
 }
 
 .p p+p {
-    margin-top: 1.1em;
+    margin: 1.1em 0;
 }
 
 .p p+.large-body {
@@ -239,13 +248,10 @@ main::after {
 
 .p p+.button-row,
 .p p+.button {
-    margin-top: 2.5rem;
+    margin-top: auto;
 }
-
-.p .large-body+.button-row,
-.p .large-body+.button {
-    margin-top: 1em;
-
+.p p+.button-row {
+    margin-top: 1rem;
 }
 
 .p .button+p,
@@ -750,17 +756,19 @@ Fixed button
 
 .fixed-button {
     position: fixed;
-    bottom: 0;
-    right: 0;
+    bottom: 2rem;
+    right: 2rem;
     z-index: 10;
     transition: transform 0.5s ease-out;
 }
 
 .fixed-button.is-down {
-    transform: translateY(100%);
+    transform: translateY(calc(100% + 2rem));
 
 }
-
+.fixed-button .small-body {
+    color:var(--grey)
+}
 .fixed-button .inner {
     padding: 1.5rem 1.75rem 1.75rem 1.5rem;
     background-color: var(--blue);
@@ -778,7 +786,8 @@ Fixed button
     width: max-content;
 }
 
-.fixed-button .inner::before {
+.fixed-button .inner::before,
+.fixed-button .inner::after {
     content: '';
     position: absolute;
     left: calc(var(--radius) * -1);
@@ -1084,6 +1093,8 @@ CTA ROW
     max-width: calc((100% - var(--padding-side)) / 2);
     min-width: min-content;
     border-radius: 0.5rem;
+    display:flex;
+    flex-direction:column;
 }
 
 @media (max-width: 750px) {
@@ -1109,7 +1120,7 @@ SIMPLE TEXT
 */
 
 .simple-text {
-    max-width: var(--max-width);
+    max-width: fit-content;
     margin: 0 auto;
     padding: var(--padding-side) var(--padding-side) 0 calc(var(--padding-side) * 2);
 }
