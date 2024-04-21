@@ -80,6 +80,7 @@ html {
 }
 
 body {
+    background-color: var(--blue);
     color: var(--color);
     font-family: 'Open Sans', sans-serif;
 }
@@ -91,10 +92,21 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    border-left: calc(var(--radius)) solid var(--blue);
-    border-right: calc(var(--radius)) solid var(--blue);
+    border: calc(var(--radius)) solid var(--blue);
+    border-top: none;
     z-index: 12;
     pointer-events: none;
+}
+body::after {
+    content: '';
+    position: fixed;
+    z-index: 11;
+    bottom: calc(var(--radius));
+    left: calc(var(--radius));
+    width: calc(var(--radius));
+    height: calc(var(--radius));
+    border-radius: var(--radius);
+    box-shadow: calc(var(--radius) / -2) calc(var(--radius) /2) 0 0 var(--blue);
 }
 
 .sr-only {
@@ -119,7 +131,7 @@ main::after {
     width: calc(var(--radius));
     height: calc(var(--radius));
     border-radius: var(--radius);
-    box-shadow: calc(var(--radius)) calc(var(--radius)) 0 0 var(--blue);
+    box-shadow: calc(var(--radius) /2) calc(var(--radius) /2) 0 0 var(--blue);
 }
 
 @media (max-width: 750px) {
@@ -238,10 +250,6 @@ main::after {
     margin-top: 0.3em;
 }
 
-.p p+.button-row,
-.p p+.button {
-    margin-top: auto;
-}
 .p p+.button-row {
     margin-top: 1rem;
 }
@@ -748,8 +756,8 @@ Fixed button
 
 .fixed-button {
     position: fixed;
-    bottom: 2rem;
-    right: 2rem;
+    bottom: 0;
+    right: 0;
     z-index: 10;
     transition: transform 0.5s ease-out;
 }
@@ -778,27 +786,28 @@ Fixed button
     width: max-content;
 }
 
-.fixed-button .inner::before,
-.fixed-button .inner::after {
+.fixed-button .inner::before {
     content: '';
     position: absolute;
     left: calc(var(--radius) * -1);
     bottom: calc(var(--radius));
+    z-index: 10;
     width: var(--radius);
     height: var(--radius);
     border-radius: var(--radius);
-    box-shadow: calc(var(--radius)) calc(var(--radius)) 0 0 var(--blue);
+    box-shadow: calc(var(--radius) / 2) calc(var(--radius) / 2) 0 0 var(--blue);
 }
 
 .fixed-button .inner::after {
     content: '';
     position: absolute;
-    right: calc(var(--radius));
     top: calc(var(--radius) * -1);
+    right: calc(var(--radius));
+    z-index: 10;
     width: var(--radius);
     height: var(--radius);
     border-radius: var(--radius);
-    box-shadow: calc(var(--radius)) calc(var(--radius)) 0 0 var(--accent-color-1);
+    box-shadow: calc(var(--radius) / 2) calc(var(--radius) / 2) 0 0 var(--blue);
 }
 
 /*
@@ -972,12 +981,23 @@ IMAGE WITH TEXT
 
 .image-with-text.is-reversed {
     flex-direction: row-reverse;
+    .text-container {
+        padding-left: calc(var(--padding-side) * 2);
+    }
 }
 
 .image-with-text.is-reversed .image-container {
     --width: calc(var(--grid-1) * 10);
     --max-width: 800px;
     height: calc(var(--width) * var(--ratio));
+
+}
+
+.image-with-text.is-small-image .image-container{
+    --width: calc(var(--grid-1) * 8);
+    --max-width: 480px;
+    height: calc(var(--width) * var(--ratio));
+    max-height: calc(var(--max-width) * var(--ratio));
 
 }
 
@@ -1004,7 +1024,11 @@ IMAGE WITH TEXT
     }
 }
 
-.image-container img {
+
+
+
+.image-container img,
+.image-container video {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1112,7 +1136,7 @@ SIMPLE TEXT
 */
 
 .simple-text {
-    max-width: fit-content;
+    max-width: var(--max-width);
     margin: 0 auto;
     padding: var(--padding-side) var(--padding-side) 0 calc(var(--padding-side) * 2);
 }
@@ -1159,6 +1183,7 @@ details .p {
 details .button {
     display: block;
     width: max-content;
+    margin-top: 1em;
 }
 
 details summary {
