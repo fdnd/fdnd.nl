@@ -97,6 +97,7 @@ body::before {
     z-index: 12;
     pointer-events: none;
 }
+
 body::after {
     content: '';
     position: fixed;
@@ -107,6 +108,15 @@ body::after {
     height: calc(var(--radius));
     border-radius: var(--radius);
     box-shadow: calc(var(--radius) / -2) calc(var(--radius) /2) 0 0 var(--blue);
+}
+
+@media (max-width: 750px) {
+    body::before {
+        border-bottom: none;
+    }
+    body::after {
+        content: unset;
+    }
 }
 
 .sr-only {
@@ -137,6 +147,9 @@ main::after {
 @media (max-width: 750px) {
     main {
         z-index: 1;
+    }
+    main::after {
+        content: unset;
     }
 
     header {
@@ -810,6 +823,13 @@ Fixed button
     box-shadow: calc(var(--radius) / 2) calc(var(--radius) / 2) 0 0 var(--blue);
 }
 
+@media (max-width: 750px) {
+    .fixed-button .inner::before {
+        content: unset;
+    }
+}
+
+
 /*
 ======================
 PAGE HEADER
@@ -981,8 +1001,13 @@ IMAGE WITH TEXT
 
 .image-with-text.is-reversed {
     flex-direction: row-reverse;
-    .text-container {
-        padding-left: calc(var(--padding-side) * 2);
+}
+.image-with-text.is-reversed .text-container {
+    padding-left: calc(var(--padding-side) * 2);
+}
+@media (max-width: 750px) {
+    .image-with-text.is-reversed .text-container {
+        padding-left: 0;
     }
 }
 
