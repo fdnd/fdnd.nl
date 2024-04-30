@@ -114,6 +114,7 @@ body::after {
     body::before {
         border-bottom: none;
     }
+
     body::after {
         content: unset;
     }
@@ -148,6 +149,7 @@ main::after {
     main {
         z-index: 1;
     }
+
     main::after {
         content: unset;
     }
@@ -317,6 +319,7 @@ main::after {
     background-color: var(--background);
     max-width: calc(var(--width) - 2rem);
 }
+
 /* .image-container.full-image {
     --width: 100%;
     --max-width: 100%;
@@ -788,9 +791,11 @@ Fixed button
     transform: translateY(calc(100% + 2rem));
 
 }
+
 .fixed-button .small-body {
-    color:var(--grey)
+    color: var(--grey)
 }
+
 .fixed-button .inner {
     padding: 1.5rem 1.75rem 1.75rem 1.5rem;
     background-color: var(--blue);
@@ -1011,9 +1016,11 @@ IMAGE WITH TEXT
 .image-with-text.is-reversed {
     flex-direction: row-reverse;
 }
+
 .image-with-text.is-reversed .text-container {
     padding-left: calc(var(--padding-side) * 2);
 }
+
 @media (max-width: 750px) {
     .image-with-text.is-reversed .text-container {
         padding-left: 0;
@@ -1027,7 +1034,7 @@ IMAGE WITH TEXT
 
 }
 
-.image-with-text.is-small-image .image-container{
+.image-with-text.is-small-image .image-container {
     --width: calc(var(--grid-1) * 8);
     --max-width: 480px;
     height: calc(var(--width) * var(--ratio));
@@ -1038,7 +1045,8 @@ IMAGE WITH TEXT
     .image-with-text.is-reversed .image-container {
         --width: calc(100vw - var(--padding-side));
     }
-    .image-with-text.is-small-image .image-container{
+
+    .image-with-text.is-small-image .image-container {
         --width: calc(100vw - var(--padding-side));
     }
 }
@@ -1134,8 +1142,9 @@ CTA ROW
     margin: auto;
     gap: var(--padding-side);
     padding: var(--padding-side);
-
 }
+
+
 
 .cta {
     background-color: var(--accent-color-2);
@@ -1143,10 +1152,10 @@ CTA ROW
     flex-grow: 1;
     padding: calc(var(--padding-side) / 2);
     max-width: calc((100% - var(--padding-side)) / 2);
-    min-width: min-content;
+    min-width: 250px;
     border-radius: 0.5rem;
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
 }
 
 @media (max-width: 750px) {
@@ -1154,6 +1163,12 @@ CTA ROW
         width: 100%;
         max-width: unset;
         padding: 1.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .cta-row .inner {
+        gap: 1rem;
     }
 }
 
@@ -1239,7 +1254,7 @@ details[open] summary {
 Program
 ======================
 */
-.program-list + .button-row {
+.program-list+.button-row {
     margin-top: 2em;
 }
 
@@ -1248,7 +1263,7 @@ Program
     padding: 0;
     margin-top: 2rem;
     border: 1px solid var(--accent-color-1);
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     border-radius: var(--small-radius);
 }
 
@@ -1257,29 +1272,28 @@ Program
     flex-wrap: wrap;
     align-items: baseline;
     gap: 0.2rem 2rem;
+    padding: 1em 0;
 }
+
 @media (max-width: 750px) {
     .program-item p {
         width: 100%;
     }
-    
-}
 
-.program-item+.program-item {
-    margin-top: 1.25em;
 }
 
 .program-item:nth-child(3),
 .program-item:nth-child(5) {
     border-top: 1px solid var(--accent-color-1);
     border-bottom: 1px solid var(--accent-color-1);
-    padding: 1em 0 0;
+    padding: 1em 0;
     margin-top: 0;
-    padding-right: 3em;
 }
 
 .program-list p+p {
     margin-top: 0;
+    width: 50%;
+    flex-grow: 1;
 }
 
 .program .button {
