@@ -252,7 +252,7 @@ main::after {
 }
 
 .p p+p {
-    margin: 1.1em 0;
+    margin: 1.1em 0 0;
 }
 
 .p p+.large-body {
@@ -316,8 +316,17 @@ main::after {
     border-radius: var(--small-radius);
     background-color: var(--background);
     max-width: calc(var(--width) - 2rem);
-
 }
+/* .image-container.full-image {
+    --width: 100%;
+    --max-width: 100%;
+    padding-right: var(--padding-side);
+    padding-right: var(--padding-side);
+}
+.image-container.full-image + .p {
+    margin-top: var(--padding-side);
+    padding-left: var(--padding-side);
+} */
 
 figcaption span {
     display: block;
@@ -1023,11 +1032,13 @@ IMAGE WITH TEXT
     --max-width: 480px;
     height: calc(var(--width) * var(--ratio));
     max-height: calc(var(--max-width) * var(--ratio));
-
 }
 
 @media (max-width: 750px) {
     .image-with-text.is-reversed .image-container {
+        --width: calc(100vw - var(--padding-side));
+    }
+    .image-with-text.is-small-image .image-container{
         --width: calc(100vw - var(--padding-side));
     }
 }
@@ -1151,7 +1162,8 @@ CTA ROW
 }
 
 .cta .button {
-    width: max-content;
+    max-width: max-content;
+    margin-top: 1em;
 }
 
 /*
@@ -1227,15 +1239,12 @@ details[open] summary {
 Program
 ======================
 */
-
-.open-avond-program {
-    width: var(--section-width);
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 4rem var(--padding-side) 0;
+.program-list + .button-row {
+    margin-top: 2em;
 }
 
-.open-avond-program-list {
+.program-list {
+    max-width: max-content;
     padding: 0;
     margin-top: 2rem;
     border: 1px solid var(--accent-color-1);
@@ -1243,33 +1252,37 @@ Program
     border-radius: var(--small-radius);
 }
 
-.open-avond-program-item {
+.program-item {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
     gap: 0.2rem 2rem;
 }
 @media (max-width: 750px) {
-    .open-avond-program-item p {
+    .program-item p {
         width: 100%;
     }
-
+    
 }
 
-.open-avond-program-item+.open-avond-program-item {
+.program-item+.program-item {
     margin-top: 1.25em;
 }
 
-.open-avond-program-item:nth-child(2) {
+.program-item:nth-child(3),
+.program-item:nth-child(5) {
+    border-top: 1px solid var(--accent-color-1);
     border-bottom: 1px solid var(--accent-color-1);
-    padding-bottom: 1.25em;
+    padding: 1em 0 0;
+    margin-top: 0;
+    padding-right: 3em;
 }
 
-.open-avond-program-list p+p {
+.program-list p+p {
     margin-top: 0;
 }
 
-.open-avond-program .button {
+.program .button {
     width: max-content;
     margin-top: 1rem;
 }
