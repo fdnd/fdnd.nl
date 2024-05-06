@@ -69,73 +69,73 @@
 }
 
 /* Spacing */
-.p {
+p {
     font-size: clamp(1rem, calc(18 / 60 * var(--grid-1)), 1.5rem);
     letter-spacing: -0.03em;
 }
 
-.p .large-heading+p {
+.large-heading + p {
     margin-top: 1em;
 
 }
 
-.p .medium-heading+p,
-.p .medium-heading+details,
-.p .small-heading+p {
+.medium-heading + p,
+.medium-heading + details,
+.small-heading + p {
     margin-top: 1.1em;
 }
 
-.p p+.medium-heading,
-.p details+.medium-heading,
-.p p+.small-heading {
+p + .medium-heading,
+details + .medium-heading,
+p + .small-heading {
     margin-top: 1.5em;
 }
 
-.p p+p {
+p + p {
     margin: 1.1em 0 0;
 }
 
-.p p+.large-body {
+p + .large-body {
     margin-top: 1.1em;
 }
 
-.p p+p.small-body {
+p + p.small-body {
     margin-top: 0.3em;
 }
 
-.p p+.button-row {
+p + .button-row {
     margin-top: 1rem;
 }
 
-.p .button+p,
-.p .button+h1,
-.p .button+h2,
-.p .button+h3,
-.p .button+h4,
-.p .button+h5,
-.p .button+h6 {
+.button + p,
+.button + h1,
+.button + h2,
+.button + h3,
+.button + h4,
+.button + h5,
+.button + h6 {
     margin-top: 2em;
 }
 
 @media (max-width: 750px) {
 
-    .p p+.button-row,
-    .p p+.button {
+    p + .button-row,
+    p + .button {
         margin-top: 1.5rem;
 
     }
 }
 
-.p .button-row+p,
-.p .button+p {
+.button-row + p,
+.button + p {
     margin-top: 2rem;
 
 }
 
 @media (max-width: 750px) {
 
-    .p .button-row+p,
-    .p .button+p {
+    .button-row + p,
+    .button + p {
         margin-top: 1rem;
     }
 }
@@ -158,17 +158,6 @@
     max-width: calc(var(--width) - 2rem);
 }
 
-/* .image-container.full-image {
-    --width: 100%;
-    --max-width: 100%;
-    padding-right: var(--padding-side);
-    padding-right: var(--padding-side);
-}
-.image-container.full-image + .p {
-    margin-top: var(--padding-side);
-    padding-left: var(--padding-side);
-} */
-
 figcaption span {
     display: block;
 }
@@ -180,7 +169,6 @@ figcaption span {
     gap: 0.75rem;
 }
 
-
 .button {
     position: relative;
     display: block;
@@ -189,6 +177,12 @@ figcaption span {
     letter-spacing: -0.04em;
     font-weight: 550;
     font-size: clamp(1rem, calc(16 / 60 * var(--grid-1)), 1.25rem);
+    align-self:start;
+    margin-top: 1rem;
+}
+
+.button-row .button {
+    margin-top: 0;
 }
 
 .button:hover,
@@ -405,6 +399,8 @@ IMAGE WITH TEXT
 }
 
 .text-container {
+    display:flex;
+    flex-direction: column;
     width: 40%;
     flex-grow: 1;
     padding: var(--padding-side) var(--padding-side) 0;
@@ -420,25 +416,12 @@ IMAGE WITH TEXT
     .text-container {
         width: 100%;
         padding: 0;
+        padding-right: calc(var(--padding-side) / 2);
     }
-}
-
-.text-container .p {
-    padding-right: calc(var(--padding-side) / 2);
 }
 
 @media (max-width: 750px) {
-    .text-container .p {
-        padding: 0;
-    }
 
-    .text-container .p p+p {
-        padding: 0;
-    }
-}
-
-.text-container .p p+p {
-    padding-right: calc(var(--padding-side) * 0.75);
 }
 
 /*
@@ -549,18 +532,8 @@ details:nth-of-type(even) {
     --active-text-color: var(--color);
 }
 
-details+details {
+details + details {
     margin-top: 1.5rem;
-}
-
-details .p {
-    padding: 1rem 1.25rem;
-}
-
-details .button {
-    display: block;
-    width: max-content;
-    margin-top: 1em;
 }
 
 details summary {
@@ -574,12 +547,22 @@ details[open] summary {
     color: var(--active-text-color);
 }
 
+details p {
+    padding:0 1.25rem 1em;
+}
+
+details .button {
+    display: block;
+    width: max-content;
+    margin: 1em;
+}
+
 /*
 ======================
 Program
 ======================
 */
-.program-list+.button-row {
+.program-list + .button-row {
     margin-top: 2em;
 }
 
@@ -615,7 +598,7 @@ Program
     margin-top: 0;
 }
 
-.program-list p+p {
+.program-list p + p {
     margin-top: 0;
     width: 50%;
     flex-grow: 1;
