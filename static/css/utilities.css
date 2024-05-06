@@ -1,3 +1,8 @@
+.sr-only {
+    position: absolute;
+    text-indent: -9999px;
+}
+
 /* Typo */
 .font-bold {
     font-weight: 600;
@@ -188,7 +193,6 @@ figcaption span {
 .button:hover,
 .button:focus {
     outline: none;
-
 }
 
 .button:hover span,
@@ -204,7 +208,6 @@ figcaption span {
     border: 1px solid currentcolor;
     background: var(--background);
     transition: translate 0.3s ease-out;
-
 }
 
 .button.is-full-color.is-accent-1 span,

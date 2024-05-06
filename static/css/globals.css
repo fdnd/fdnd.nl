@@ -119,12 +119,6 @@ body::after {
     }
 }
 
-.sr-only {
-    position: absolute;
-    text-indent: -9999px;
-}
-
-
 main {
     position: relative;
     z-index: 11;
