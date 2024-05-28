@@ -6,6 +6,7 @@
     --green: #66E5BF;
     --yellow: #FFFC86;
     --angle: 42deg;
+    --base-color: var(--purple);
 
     --background: var(--grey);
     --color: var(--blue);
@@ -76,11 +77,11 @@ body {
 }
 
 html {
-    background-color: var(--blue);
+    background-color: var(--base-color);
 }
 
 body {
-    background-color: var(--blue);
+    background-color: var(--base-color);
     color: var(--color);
     font-family: 'Open Sans', sans-serif;
 }
@@ -92,7 +93,7 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    border: calc(var(--radius)) solid var(--blue);
+    border: calc(var(--radius)) solid var(--base-color);
     border-top: none;
     z-index: 12;
     pointer-events: none;
@@ -107,7 +108,7 @@ body::after {
     width: calc(var(--radius));
     height: calc(var(--radius));
     border-radius: var(--radius);
-    box-shadow: calc(var(--radius) / -2) calc(var(--radius) /2) 0 0 var(--blue);
+    box-shadow: calc(var(--radius) / -2) calc(var(--radius) /2) 0 0 var(--base-color);
 }
 
 @media (max-width: 750px) {
@@ -142,7 +143,7 @@ main::after {
     width: calc(var(--radius));
     height: calc(var(--radius));
     border-radius: var(--radius);
-    box-shadow: calc(var(--radius) /2) calc(var(--radius) /2) 0 0 var(--blue);
+    box-shadow: calc(var(--radius) /2) calc(var(--radius) /2) 0 0 var(--base-color);
 }
 
 @media (max-width: 750px) {
@@ -185,7 +186,7 @@ main::after {
 
 .large-heading {
     font-size: clamp(2rem, calc(52 / 60 * var(--grid-1)), 4.375rem);
-    letter-spacing: -0.05em;
+    letter-spacing: -0.06em;
     line-height: 1;
 }
 
@@ -198,12 +199,13 @@ main::after {
 .small-heading {
     font-size: clamp(1rem, calc(18 / 60 * var(--grid-1)), 1.5rem);
     letter-spacing: -0.03em;
+    line-height: 1;
 }
 
 .xlarge-body {
     font-size: clamp(1.25rem, calc(24 / 60 * var(--grid-1)), 2rem);
     letter-spacing: -0.04em;
-    line-height: 1.3;
+    line-height: 1.33;
 }
 
 
@@ -431,8 +433,8 @@ HEADER
 
 .header {
     position: relative;
-    background-color: var(--blue);
-    color: var(--background);
+    background-color: var(--base-color);
+    color: var(--color);
     padding: 1.5rem 0 0 var(--padding-side);
 }
 
@@ -448,14 +450,16 @@ HEADER
     gap: 1.75rem;
     flex-wrap: wrap;
     align-items: center;
-    width: calc(100% - 1.5rem * 2 - var(--padding-side));
+    width: calc(100% - 3rem * 2 - var(--padding-side));
     max-width: calc(var(--max-width) - 1.5rem * 6 - var(--padding-side));
     min-height: 1.5rem;
 }
 
 
-.header .insta {
+.header .socials {
     margin-right: var(--padding-side);
+    display: flex;
+    gap: 1rem;
 }
 
 
@@ -465,7 +469,7 @@ HEADER
         align-items: center;
     }
 
-    .header .insta {
+    .header .socials {
         margin-right: 0;
         margin-left: auto;
         align-self: center;
@@ -479,7 +483,7 @@ HEADER
         gap: 0.5rem;
     }
 
-    .header .insta {
+    .header .socials {
         order: 1;
         margin-left: 0;
         margin-right: 1rem;
@@ -534,7 +538,7 @@ HEADER
 
 @media (max-width: 750px) {
     .mobile-right {
-        width: calc(100% - 6rem);
+        width: calc(100% - 8rem);
         justify-content: space-between;
     }
 }
@@ -693,7 +697,7 @@ HEADER
         padding-right: calc(var(--calc-side) + var(--padding-side));
     }
 
-    .header .insta {
+    .header .social {
         margin-right: calc(var(--padding-side) + var(--calc-side));
     }
 }
@@ -798,7 +802,7 @@ Fixed button
 
 .fixed-button .inner {
     padding: 1.5rem 1.75rem 1.75rem 1.5rem;
-    background-color: var(--blue);
+    background-color: var(--base-color);
     border-radius: var(--radius) 0 0 0;
     animation: up 0.4s 0.4s ease-out forwards;
     transform: translateY(100%);
@@ -822,7 +826,7 @@ Fixed button
     width: var(--radius);
     height: var(--radius);
     border-radius: var(--radius);
-    box-shadow: calc(var(--radius) / 2) calc(var(--radius) / 2) 0 0 var(--blue);
+    box-shadow: calc(var(--radius) / 2) calc(var(--radius) / 2) 0 0 var(--base-color);
 }
 
 .fixed-button .inner::after {
@@ -834,7 +838,7 @@ Fixed button
     width: var(--radius);
     height: var(--radius);
     border-radius: var(--radius);
-    box-shadow: calc(var(--radius) / 2) calc(var(--radius) / 2) 0 0 var(--blue);
+    box-shadow: calc(var(--radius) / 2) calc(var(--radius) / 2) 0 0 var(--base-color);
 }
 
 @media (max-width: 750px) {
@@ -875,9 +879,30 @@ PAGE HEADER
     overflow: hidden;
 }
 
+.page-header-banner {
+    position: absolute;
+    z-index: 2;
+    top: -1rem;
+    left: -1rem;
+    width: 5rem;
+    height: auto;
+    transition: 0.4s transform ease-out;
+}
 
+.page-header-banner:hover {
+    transform: scale(1.05);
+}
 
-.page-header-image img {
+@media (max-width: 750px) {
+    .page-header-banner {
+        top: unset;
+        left: unset;
+        right: -1rem;
+        bottom: 2rem;
+    }
+}
+
+.page-header-media {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1302,7 +1327,7 @@ Program
 }
 
 footer {
-    color: var(--background)
+    color: var(--color);
 }
 
 footer .button {
@@ -1317,13 +1342,13 @@ footer .button {
     padding: 5rem 0 1.5rem;
 }
 
-.insta {
+.social {
     display: block;
     width: 1.5rem;
     height: 1.5rem;
 }
 
-.insta svg {
+.social svg {
     width: 100%;
     height: auto;
     fill: currentColor;
