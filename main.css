@@ -697,8 +697,15 @@ HEADER
         padding-right: calc(var(--calc-side) + var(--padding-side));
     }
 
-    .header .social {
+    .header .socials {
         margin-right: calc(var(--padding-side) + var(--calc-side));
+    }
+    .top-header {
+        width: 55%;
+        max-width: calc(var(--max-width) * 0.6);
+    }
+    .mobile-right {
+        width: 50%;
     }
 }
 
