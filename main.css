@@ -16,6 +16,8 @@
     --accent-color-2: var(--green);
     --accent-color-3: var(--yellow);
 
+    --accent-color-1-rgb: 166, 117, 245;
+
     --grid-1: 100vw / 24;
     --grid-1-calc: calc(var(--grid-1));
     --padding-side: clamp(1rem, var(--grid-1-calc), 5rem);
@@ -226,6 +228,11 @@ main::after {
     letter-spacing: -0.04em;
     line-height: 1.5;
 }
+.xsmall-body {
+    font-size: 12px;
+    letter-spacing: 0em;
+    line-height: 1;
+}
 
 .caps {
     text-transform: uppercase;
@@ -240,7 +247,6 @@ main::after {
 
 .p .large-heading+p {
     margin-top: 1em;
-
 }
 
 .p .medium-heading+p,
@@ -1050,8 +1056,13 @@ IMAGE WITH TEXT
 }
 
 .image-with-text.is-reversed .text-container {
+    padding-left: calc(var(--padding-side));
+}
+
+.image-with-text.is-reversed.is-small-image .text-container {
     padding-left: calc(var(--padding-side) * 2);
 }
+
 
 @media (max-width: 750px) {
     .image-with-text.is-reversed .text-container {
@@ -1240,43 +1251,43 @@ SIMPLE TEXT
     }
 }
 
-details {
+.simple-text details {
     border: 1px solid currentColor;
     border-radius: var(--small-radius);
     overflow: hidden;
 }
 
-details:nth-of-type(odd) {
+.simple-text details:nth-of-type(odd) {
     --active-color: var(--accent-color-1);
     --active-text-color: var(--color);
 }
 
-details:nth-of-type(even) {
+.simple-text details:nth-of-type(even) {
     --active-color: var(--accent-color-2);
     --active-text-color: var(--color);
 }
 
-details+details {
+.simple-text details + details {
     margin-top: 1.5rem;
 }
 
-details .p {
+.simple-text details .p {
     padding: 1rem 1.25rem;
 }
 
-details .button {
+.simple-text details .button {
     display: block;
     width: max-content;
     margin-top: 1em;
 }
 
-details summary {
+.simple-text details summary {
     padding: 1.25rem;
     transition: background 0.3s ease-out, color 0.3s ease-out;
     cursor: pointer;
 }
 
-details[open] summary {
+.simple-text details[open] summary {
     background: var(--active-color);
     color: var(--active-text-color);
 }
@@ -1333,8 +1344,200 @@ Program
     margin-top: 1rem;
 }
 
+
+/*
+======================
+Calendar
+======================
+*/
+
+.calendar__intro {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--padding-side) var(--padding-side) 0;
+}
+
+.calendar-item {
+    
+}
+
+.calendar__scroll {
+    display: flex;
+    overflow-x: scroll;
+    height: 100%;
+    min-height: 600px;
+    width: 100%;
+    padding: var(--padding-side) var(--padding-side) 0;
+    
+}
+.calendar__container {
+    display: flex;
+    height: 100%;
+}
+
+
+.calendar-item__month {
+    position: sticky;
+    left: 0;
+    width: max-content;
+    padding-right: 1em;
+}
+
+.calendar-item__days {
+    border: 2px solid var(--accent-color-1);
+    display: flex;
+    flex-wrap: wrap;
+    width: max-content;
+    margin-top: 1rem;
+    height: 100%;
+}
+.calendar-item__day {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 320px;
+    text-align: center;
+    border: 1px solid var(--accent-color-1);
+    margin-left: -1px;
+    padding: 0.5em 0.3em;
+}
+
+.calendar-item__day.is-saturday, .calendar-item__day.is-sunday {
+    background: rgba(var(--accent-color-1-rgb), 0.2);
+}
+
+
+@supports selector(:has(*)) {
+    .calendar-item__day {
+        width: 3rem;
+        transition: width 0.4s ease-out;
+    }
+}
+
+.calendar-item__day .events {
+    margin-top: 1em;
+}
+
+.event {
+    position: relative;
+    text-align: left;
+    --background: var(--accent-color-2);
+}
+
+.event.is-jaar-2 {
+    --background: var(--accent-color-1);
+    --color: var(--blue);
+}
+.event.is-jaar-2.is-jaar-1 {
+    --background: var(--grey);
+    --color: var(--blue);
+    --border: currentColor;
+}
+
+
+.event.is-weloveweb.is-talk {
+    --background: var(--blue);
+    --color: var(--grey);
+}
+
+
+.event + .event {
+    margin-top: 0.5em;
+}
+
+.event time {
+    position: absolute;
+    text-indent: -900000px;
+}
+
+.event summary {
+    width: 2rem;
+    max-width: 2rem;
+    border-radius: 2rem;
+    padding: 0.25rem 0.75rem;
+    height: 2rem;
+    background: var(--background);
+    color: var(--color);
+    justify-content: center;
+    anchor-name: --summary-el;
+    border: 1px solid var(--border);
+
+}
+
+.event__icon {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: left;
+    cursor: pointer;
+}
+
+.event__icon .close {
+    overflow: visible;
+    width: 0.8em;
+    height: 0.8em;
+    display: none;
+}
+
+.event__content {
+    width: 260px;
+    position: absolute;
+    /*  Anchor reference  */
+    position-anchor: --summary-el;
+    inset-area: right center;
+    margin-left: 0.25rem;
+    position-try-options: --left;
+    border: 1px solid var(--border);
+
+    @position-try --right {
+        inset-area: right center;
+        margin-right: 0.25rem;
+        margin-left: 0;
+    }
+
+}
+
+.event__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2em;
+    margin-top: 1em;
+}
+.event__tag {
+    padding: 0.25em 0.75em;
+    background: var(--color);
+    color: var(--background);
+    border-radius: calc(var(--small-radius));
+}
+
+.event[open] .event__icon .open {
+    display: none;
+}
+.event[open] .event__icon .close {
+    display: block;
+    fill: var(--color);
+}
+.event[open] .event__content {
+    z-index: 1;
+    padding: 0.7em 1em;
+    background: var(--background);
+    color: var(--color);
+    border-radius: calc(var(--small-radius) / 2);
+}
+
+
+
+/*
+======================
+Footorrr
+======================
+*/
+
 footer {
     color: var(--color);
+    position: relative;
+    z-index: 12;
 }
 
 footer .button {
