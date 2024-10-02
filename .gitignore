@@ -105,3 +105,7 @@ dist
 
 # Visual Studio Code files
 .vscode
+
+# Mac OSX files
+.DS_Store
+
