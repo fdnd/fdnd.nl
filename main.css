@@ -1122,6 +1122,10 @@ IMAGE WITH TEXT
     border-radius: var(--radius);
 }
 
+.image-container img.keep-ratio, .image-container video.keep-ratio {
+    object-fit: contain;
+}
+
 .text-container {
     width: 40%;
     flex-grow: 1;
