@@ -1541,7 +1541,7 @@ Footorrr
 footer {
     color: var(--color);
     position: relative;
-    z-index: 9;
+    z-index: 8;
 }
 
 footer .button {
