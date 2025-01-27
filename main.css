@@ -1565,3 +1565,8 @@ footer .button {
     height: auto;
     fill: currentColor;
 }
+
+.acknowledgements {
+    list-style:none;
+    font-size: .7rem;
+}
