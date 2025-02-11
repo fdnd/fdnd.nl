@@ -231,7 +231,7 @@ main::after {
 .xsmall-body {
     font-size: 12px;
     letter-spacing: 0em;
-    line-height: 1;
+    line-height: 1.5;
 }
 
 .caps {
