@@ -456,11 +456,10 @@ HEADER
   gap: 1.75rem;
   flex-wrap: wrap;
   align-items: center;
-  width: calc(100% - 3rem * 2 - var(--padding-side));
+  width: calc(100% - 3rem * 3 - var(--padding-side));
   max-width: calc(var(--max-width) - 1.5rem * 6 - var(--padding-side));
   min-height: 1.5rem;
 }
-
 
 .header .socials {
   margin-right: var(--padding-side);
@@ -529,6 +528,10 @@ HEADER
 @media (max-width: 750px) {
   .header-title::before {
     content: unset;
+    
+  }
+  .header-title{
+    display: none;;
   }
 }
 
@@ -544,7 +547,7 @@ HEADER
 
 @media (max-width: 750px) {
   .mobile-right {
-    width: calc(100% - 8rem);
+    width: calc(100% - 3rem * 3 - var(--padding-side));
     justify-content: space-between;
   }
 }
