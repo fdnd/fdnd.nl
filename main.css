@@ -60,6 +60,7 @@
 }
 #testimonials article div h3 img {
   position: absolute; 
+  z-index: 1;
   left: 0;
   width: 3em;
   border-radius: var(--small-radius);
