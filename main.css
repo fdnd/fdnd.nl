@@ -1379,6 +1379,7 @@ Testimonials
 
 
 .quote .cite {
+  position: relative;
   width: max-content;
   max-width: 100%;
   display: flex;
