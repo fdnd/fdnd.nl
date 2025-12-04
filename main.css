@@ -31,79 +31,6 @@
   --calc-side: calc((100vw - var(--max-width)) / 2);
 }
 
-
-#testimonials {
-}
-#testimonials h3 {
-  margin-top: 2em;
-}
-#testimonials article + h3{
-    margin-top: 4em;
-}
-#testimonials article {
-  position: relative;  
-  margin: 2em 0;
-}
-#testimonials article div { /* name tag */
-  position: absolute;
-  bottom: 0;
-  left: 1.5em;
-  padding: 0.6em;
-  padding-right: 1.2em;
-  background-color: var(--grey);
-  border-radius: var(--small-radius);
-  border: 2px solid var(--blue);
-  filter: drop-shadow(-3px 3px var(--blue));
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 4.8em;
-}
-#testimonials article div h3 {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  padding-left: 3.5em;
-}
-#testimonials article div h3 img {
-  position: absolute; 
-  z-index: 1;
-  left: 0;
-  top: -0.2em;
-  width: 3em;
-  height: 3em;
-  margin: 0;
-  padding: 0;
-  border-radius: var(--small-radius);
-}
-#testimonials article div p {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  padding-left: 3.5em;
-}
-
-#testimonials article blockquote { /* quote */
-  display: inline-block;
-  margin: 1em 0;
-  padding: 2em;
-  padding-bottom: 4.5em;
-  padding-left: 4.5em;
-  background: #A675F5;
-  border-radius: var(--small-radius);
-}
-#testimonials article blockquote:before { /* quote symbol */
-  content: "“";
-  font-family: Arial, Helvetica, sans-serif;
-  display: block;
-  position: absolute;
-  font-size:6em;
-  left: 0.2em;
-  top: 0.1em;
-}
-
-
-
 @media (max-width: 750px) {
   :root {
     /* Animated to 1 in js: */
@@ -318,6 +245,10 @@ main::after {
 }
 
 .p .large-heading+p {
+  margin-top: 1em;
+}
+
+.p .large-heading+.xlarge-body {
   margin-top: 1em;
 }
 
@@ -600,10 +531,12 @@ HEADER
 @media (max-width: 750px) {
   .header-title::before {
     content: unset;
-    
+
   }
-  .header-title{
-    display: none;;
+
+  .header-title {
+    display: none;
+    ;
   }
 }
 
@@ -1374,6 +1307,155 @@ SIMPLE TEXT
   color: var(--active-text-color);
 }
 
+
+/* ======================
+Testimonials
+====================== */
+
+.testimonials {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4rem var(--padding-side) 0;
+}
+
+.testimonials .inner {
+  max-width: 800px;
+  margin: auto;
+}
+
+.quote {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 2em 0;
+}
+
+.quote.partner-quote blockquote {
+  background-color: var(--color);
+  color: var(--background);
+}
+
+.quote.partner-quote blockquote:before {
+  background-image: url("assets/img/quotes-light.svg");
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .quote {
+      view-timeline-name: --quote;
+      animation-timeline: view();
+      animation-name: scale-in-out;
+      animation-range: entry;
+      animation-fill-mode: both;
+    }
+    .cite {
+      view-timeline-name: --cite;
+      animation-timeline: view();
+      animation-name: move-in;
+      animation-range: entry;
+      animation-fill-mode: both;
+    }
+  }
+}
+
+@keyframes scale-in-out {
+  0% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes move-in {
+  0% {
+    transform: translateX(2rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+.quote .cite {
+  width: max-content;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  height: 4.8em;
+  padding: 0.6em 1.2em 0.6em 0.6em;
+  margin-top: -2.5rem;
+  margin-left: 1.5rem;
+
+
+  background-color: var(--background);
+  border-radius: var(--small-radius);
+  border: 2px solid var(--blue);
+  box-shadow: -3px 3px 0 var(--blue);
+}
+
+.quote .cite .avatar {
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: var(--small-radius);
+  overflow: hidden;
+}
+
+.quote .cite .avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.quote .cite .text p {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.testimonials blockquote {
+  /* quote */
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem 1.5rem 4rem;
+  background: #A675F5;
+  border-radius: var(--small-radius);
+  font-weight: 550;
+}
+
+@media (max-width: 750px) {
+  .testimonials blockquote {
+    padding: 1rem 1rem 4rem;
+    gap: 1rem;
+  }
+}
+
+.testimonials blockquote::before {
+  /* quote symbol */
+  content: "";
+  flex-shrink: 0;
+  background-image: url("assets/img/quotes.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (max-width: 750px) {
+  .testimonials blockquote::before {
+    width: 1em;
+  }
+}
+
+
 /*
 ======================
 Program
@@ -1653,5 +1735,3 @@ footer .button {
   list-style: none;
   font-size: .7rem;
 }
-
-
