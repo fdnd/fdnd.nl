@@ -1314,6 +1314,7 @@ Testimonials
 
 .testimonials {
   max-width: var(--max-width);
+  overflow: hidden;
   margin: 0 auto;
   padding: 4rem var(--padding-side) 0;
 }
@@ -1321,6 +1322,28 @@ Testimonials
 .testimonials .inner {
   max-width: 800px;
   margin: auto;
+}
+
+/* 4 testimonials horizontal scroll*/
+.testimonials-row {
+  display: flex;
+  flex-flow: nowrap;
+  align-items: flex-start;
+  overflow-x: scroll;
+  overscroll-behavior-x: none;
+  scroll-snap-type: x mandatory;
+  margin-left: -3rem;
+  margin-right: -3rem;
+}
+.testimonials-row article {
+  max-width: 22rem;  
+  flex-shrink: 0; 
+  scroll-snap-align: start;
+  margin-right: 3rem;
+  scroll-margin: 3rem;
+}
+.testimonials-row article:first-of-type{
+  margin-left: 3em;
 }
 
 .quote {
