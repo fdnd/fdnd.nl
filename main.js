@@ -37,6 +37,8 @@ window.requestAnimationFrame(animateRadiiIn)
 
 
 // Scrolling functions
+// TODO: Intersection Observer van maken..
+/*
 const fixedButton = document.querySelector('.fixed-button')
 const delta = 5
 
@@ -67,3 +69,4 @@ function scrollHandler() {
   }
   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop
 }
+*/
