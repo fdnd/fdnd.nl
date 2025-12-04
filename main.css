@@ -32,6 +32,18 @@
 }
 
 
+#testimonials{
+  
+}
+#testimonials h3 {
+  margin-top: 2em;
+}
+#testimonials article{
+  margin: 2em 0;
+}
+
+
+
 @media (max-width: 750px) {
   :root {
     /* Animated to 1 in js: */
@@ -1581,3 +1593,5 @@ footer .button {
   list-style: none;
   font-size: .7rem;
 }
+
+
