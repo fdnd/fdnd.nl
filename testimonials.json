@@ -1,0 +1,398 @@
+{
+    "title": "Testimonials Frontend Design &amp; Development",
+    "description": "Dit zeggen afstudeerders en bedrijven over FDND",
+    "release_date": "1 September 2025",
+    "quotes": [
+    {
+      "type": "student",
+      "name": "Rutger Kock",
+      "linkedin": "https://www.linkedin.com/in/rutger-kock-4069b2337/",
+      "company": "Label Vier",
+      "location": "Amersfoort",
+      "companyUrl": "https://labelvier.nl/",
+      "avatar": "./assets/avatars/rutger.jpg",
+      "quote": "FDND gaf me een solide web-basis en de ruimte om uit te zoeken wat ik daarbinnen leuk vond. Na mijn stage kon ik daardoor zo met genoeg kennis aan het werk, en dat in 2 jaar."
+    },
+    {
+      "type": "student",
+      "name": "Tessa Viergever",
+      "linkedin": "https://www.linkedin.com/in/tessa-viergever/",
+      "company": "Frameless",
+      "location": "Amersfoort",
+      "companyUrl": "https://frameless.io/",
+      "avatar": "./assets/avatars/tessa.jpg",
+      "quote": "Mede dankzij de betrokken docenten, praktijkgerichte opdrachten en fijne sfeer bij FDND verliep mijn overstap naar het werkveld erg soepel. Mijn baan nu is tof en uitdagend, en ik kon vanuit mijn opleiding direct lekker aan de slag."
+    },
+    {
+      "type": "student",
+      "name": "Luuk Brauckmann",
+      "linkedin": "https://www.linkedin.com/in/luukbrauckmann/",
+      "company": "De Voorhoede",
+      "location": "Amsterdam",
+      "companyUrl": "https://www.voorhoede.nl/",
+      "avatar": "./assets/avatars/luuk-b.jpg",
+      "quote": "De opleiding Front-end Design & Development heeft mijn enthousiasme voor front-end development en webdesign echt aangewakkerd en richting gegeven. Dankzij de begeleiding van de docenten vond ik een stageplek waar ik na mijn studie ben blijven hangen en waar ik tot op de dag van vandaag met plezier werk en me inzet voor een beter en toegankelijker web voor iedereen."
+    },
+    {
+      "type": "student",
+      "name": "Marwa Hello",
+      "linkedin": "https://www.linkedin.com/in/marwa-hello-7b7b202b7/",
+      "company": "Frameless",
+      "location": "Amersfoort",
+      "companyUrl": "https://frameless.io/",
+      "avatar": "./assets/avatars/marwa.jpg",
+      "quote": "Ik had een klein beetje voorkennis in development en zocht een snelle hbo-opleiding om snel het werkveld in te gaan. FDND was voor mij perfect: kort, straight to the point en bijna volledig gericht op praktische skills. Ik leerde de frontend basisvaardigheden, samenwerken in teams, werken met frameworks, onderzoek doen en zelfstandig projecten opzetten. Voor mijn gevoel is dit de ideale opleiding als je snel resultaat wilt en snel aan het werk wilt. Ik werk nu als developer en gebruik nog steeds de vaardigheden die ik bij FDND heb geleerd."
+    },
+    {
+      "type": "student",
+      "name": "Remy Duivesteijn",
+      "linkedin": "https://www.linkedin.com/in/remy-duivesteijn-4a2221224/",
+      "company": "SIYOU",
+      "location": "Purmerend",
+      "companyUrl": "https://siyou.nl/",
+      "avatar": "./assets/avatars/remy.jpg",
+      "quote": "Ik werk sinds kort als front-end developer en designer bij SIYOU. De kennis en mindset die ik bij FDND heb opgedaan, vooral rond front-end, design en accessibility, helpen mij dagelijks om onze websites naar een hoger niveau te tillen."
+    },
+    {
+      "type": "student",
+      "name": "Ellenoor Bok",
+      "linkedin": "https://www.linkedin.com/in/ellenoor-bok-029096290/",
+      "company": "iO Digital",
+      "location": "Amsterdam",
+      "companyUrl": "https://www.iodigital.com/",
+      "avatar": "./assets/avatars/ellenoor.jpg",
+      "quote": "Ik werk nu als junior frontend developer bij iO Digital. Bij FDND heb ik geleerd hoe belangrijk toegankelijkheid is, iets wat in de praktijk nog vaak wordt vergeten. Daardoor kan ik collega’s nu beter wijzen op het belang ervan."
+    },
+    {
+      "type": "student",
+      "name": "Mohamed Taissate",
+      "linkedin": "https://www.linkedin.com/in/mohamed-taissate-151739143/",
+      "company": "KMSimpel",
+      "location": null,
+      "companyUrl": "https://www.kmsimpel.nl/",
+      "avatar": "./assets/avatars/mohamed.jpg",
+      "quote": "Na FDND ben ik als freelance frontend developer aan de slag gegaan bij KMSimpel, waar ik dagelijks werk met React, TypeScript en Firebase. De praktijkgerichte aanpak van FDND (vooral samenwerken, itereren en bouwen) heeft me geholpen om direct zelfstandig klantprojecten te draaien."
+    },
+    {
+      "type": "student",
+      "name": "Eva Haller",
+      "linkedin": "https://www.linkedin.com/in/eva-haller-2786421b7/",
+      "company": "Antoni van Leeuwenhoek Ziekenhuis",
+      "location": null,
+      "companyUrl": "https://www.avl.nl/",
+      "avatar": "./assets/avatars/eva.jpg",
+      "quote": "Ondanks dat ik nu in een ander werkveld zit, heeft FDND wel mijn liefde voor programmeren aangewakkerd. Het was een gezellige leerplek met veel ruimte voor creativiteit."
+    },
+    {
+      "type": "student",
+      "name": "Ralph Kocken",
+      "linkedin": "https://www.linkedin.com/in/ralph-kocken-367256292/",
+      "company": "HyperSolid",
+      "location": "Alkmaar",
+      "companyUrl": "https://www.wearetriple.com/",
+      "avatar": "./assets/avatars/ralph.jpg",
+      "quote": "De combinatie van samenwerken, feedback krijgen en bouwen aan echte opdrachten heeft me enorm geholpen. In mijn huidige baan merk ik hoe natuurlijk die werkwijze is geworden."
+    },
+    {
+      "type": "student",
+      "name": "Rukiya Tossou",
+      "linkedin": "https://www.linkedin.com/in/rukiya-tossou-89919634b/",
+      "company": null,
+      "location": null,
+      "companyUrl": null,
+      "avatar": "./assets/avatars/rukiya.jpg",
+      "quote": "Ik heb FDND leuk ervaren. De werkwijze van de opleiding is aangenaam en heeft mij erg geholpen. De leuke sfeer in de groep werkte erg motiverend. De docenten geven les met veel passie en alle kennis en skills die ik heb opgedaan neem ik mee in mijn werk en in de toekomst."
+    },
+    {
+      "type": "student",
+      "name": "Jesse Kramer",
+      "linkedin": "https://www.linkedin.com/in/jesse-kramer15/",
+      "company": "Sumix Studio",
+      "location": null,
+      "companyUrl": "https://sumix.nl/",
+      "avatar": "./assets/avatars/jesse-k.jpg",
+      "quote": "Tijdens FDND leerde ik niet alleen over code maar vooral hoe je samenwerkt en écht voor de gebruiker ontwerpt. We werkten met echte opdrachtgevers, waardoor je goed meekrijgt hoe het in de praktijk gaat. Dankzij die ervaring kon ik samen met twee medestudenten ons bedrijf, Sumix Studio starten. Inmiddels hebben we al meerdere mooie websites mogen realiseren."
+    },
+    {
+      "type": "student",
+      "name": "Roelie Jansen",
+      "linkedin": "https://www.linkedin.com/in/roelie-jansen/",
+      "company": "Goedemiddag!",
+      "location": "Delft",
+      "companyUrl": "https://www.goedemiddag.nl/",
+      "avatar": "./assets/avatars/roelie.jpg",
+      "quote": "Dankzij FDND ben ik terecht gekomen in een werkveld waarin ik nooit uitgeleerd raak en mezelf oneindig geïnspireerd kan voelen."
+    },
+    {
+      "type": "student",
+      "name": "Tom Deeterink",
+      "linkedin": "https://www.linkedin.com/in/tomdeeterink/",
+      "company": "Werktijden.nl",
+      "location": "Amsterdam",
+      "companyUrl": "https://www.werktijden.nl/",
+      "avatar": "./assets/avatars/tom-d.jpg",
+      "quote": "De opleiding heeft me geholpen met probleem oplossend vermogen, en rekening houden met minderheden op het web. Na de opleiding heb je een ander beeld van het web, doe daar wat mee. Maar buig niet voor 1 mening, denk zelf eens na en voer het gesprek. Zo kan je het juiste balans vinden in het werkveld."
+    },
+    {
+      "type": "student",
+      "name": "Latoya Nijmeijer",
+      "linkedin": "https://www.linkedin.com/in/latoyanijmeijer/",
+      "company": "Merkle Nederland",
+      "location": "Rotterdam",
+      "companyUrl": "https://www.merkle.com/",
+      "avatar": "./assets/avatars/latoya.jpg",
+      "quote": "Bij FDND leerde ik kritisch nadenken over functionaliteiten. Die manier van denken gebruik ik nu nog steeds."
+    },
+    {
+      "type": "student",
+      "name": "Tygo Wolven",
+      "linkedin": "https://www.linkedin.com/in/tygo-wolven-091515241/",
+      "company": "Wizzo",
+      "location": "Heemskerk",
+      "companyUrl": "https://wizzo.nl/",
+      "avatar": "./assets/avatars/tygo.jpg",
+      "quote": "Terugkijkend op mijn tijd bij FDND, zie ik een opleiding die er alles aan doet om jou zo snel mogelijk klaar te stomen voor het werkveld. In twee jaar tijd heb ik op hoog tempo geleerd hoe ik mijzelf flexibel kan inzetten om nieuwe technologieën eigen te maken. Deze manier van leren helpt mij nog iedere dag om mee te bewegen met de ontwikkelingen binnen het vak."
+    },
+    {
+      "type": "student",
+      "name": "Anne van Dijk",
+      "linkedin": "https://www.linkedin.com/in/anne-van-dijk-617a472a4/",
+      "company": "Norday",
+      "location": "Amsterdam",
+      "companyUrl": "https://norday.nl/",
+      "avatar": "./assets/avatars/anne.jpg",
+      "quote": "FDND heeft mij een sterke basis gegeven waarin nieuwe ontwikkelingen, standaarden en toegankelijkheid centraal staan, wat ik nu bij mijn werk direct kan toepassen. Het zijn kwaliteiten waar de industrie soms nog op achterloopt, waardoor je als afgestudeerde unieke kennis meebrengt waar ook ervaren teams in het bedrijfsleven nog van kunnen leren."
+    },
+    {
+      "type": "student",
+      "name": "Ryan Korver",
+      "linkedin": "https://www.linkedin.com/in/ryan-korver-brix-studio/",
+      "company": "Brix Studio",
+      "location": "Amsterdam",
+      "companyUrl": "https://brixstudio.nl/",
+      "avatar": "./assets/avatars/ryan.jpg",
+      "quote": "FDND heeft me in twee jaar opgeleid tot full-service frontender. Ik begon zonder codekennis, maar door de praktijkgerichte aanpak bouw ik nu via mijn eigen onderneming professionele websites voor bedrijven. De opleiding gaf me precies de technische en visuele vaardigheden die ik dagelijks inzet voor mijn klanten."
+    },
+    {
+      "type": "student",
+      "name": "Maaike Verplancke",
+      "linkedin": "https://www.linkedin.com/in/maaike-verplancke-28bba9181/",
+      "company": "Raadhuis",
+      "location": "Oudorp",
+      "companyUrl": "https://raadhuis.com/",
+      "avatar": "./assets/avatars/maaike.jpg",
+      "quote": "FDND Heeft me de juiste handvaten gegeven om aan de slag te kunnen als Front-ender. Niet alleen verschillende technieken en standaarden, maar ook hoe je je weg uiteindelijk kunt vinden op de werkvloer."
+    },
+    {
+      "type": "student",
+      "name": "Siem Postmus",
+      "linkedin": "https://www.linkedin.com/in/siem-postmus-712385205/",
+      "company": "Fivespark",
+      "location": "Amstelveen",
+      "companyUrl": "https://fivespark.com/",
+      "avatar": "./assets/avatars/siem.jpg",
+      "quote": "Bij FDND kreeg ik echt een voorproefje van het werkveld: nieuwe skills, echte projecten en samenwerken zoals in een professioneel team. Die kennis neem ik nu dagelijks mee in mijn fulltime job. Het blijft een solide basis voor hoe ik verder groei."
+    },
+    {
+      "type": "student",
+      "name": "Suus Harsveld",
+      "linkedin": "https://www.linkedin.com/in/suusharsveld/",
+      "company": "VodafoneZiggo",
+      "location": "Utrecht",
+      "companyUrl": "https://www.vodafoneziggo.nl",
+      "avatar": "./assets/avatars/suus.jpg",
+      "quote": "Wat me het meest is bijgebleven van FDND is hoe warm en persoonlijk de sfeer binnen de opleiding was. Je kent elkaar écht: studenten en docenten werken nauw samen en met iedere vraag kun je ergens terecht; er is altijd wel iemand die met je wil meedenken. Die open en toegankelijke cultuur maakte de opleiding voor mij bijzonder waardevol en gaf me het vertrouwen om door te groeien naar mijn huidige functie bij VodafoneZiggo, waar ik met veel trots werk."
+    },
+    {
+      "type": "student",
+      "name": "Seijno van Nieuwkoop",
+      "linkedin": "https://www.linkedin.com/in/seijno-van-nieuwkoop-17852020a/",
+      "company": "TrackBacked",
+      "location": null,
+      "companyUrl": "https://trackbacked.com",
+      "avatar": "./assets/avatars/seijno.jpg",
+      "quote": "FDND is een innovatieve 2 jarige studie waar de docenten met volle passie je alle kennis over het front-end web gaan vertellen en doorgeven. Mij heeft het een mooie kans gegeven om mezelf te verdiepen in coderen en dit ook te gebruiken in mijn skillset."
+    },
+    {
+      "type": "student",
+      "name": "Cathelijne Visser",
+      "linkedin": "https://www.linkedin.com/in/cathelijne-visser/",
+      "company": "Cream",
+      "location": "Berkel & Rodenrijs",
+      "companyUrl": "https://cream.nl/",
+      "avatar": "./assets/avatars/cathelijne.jpg",
+      "quote": "Ik was op zoek naar een snelle opleiding waarna ik snel het werkveld in kon. Dit en meer heb ik bij FDND zeker gevonden. Met de connecties die er vanuit de opleiding meegegeven worden, is het instappen in het werkveld erg makkelijk. De opleiding leert je niet alleen coderen, maar ook hoe je zelf code kan blijven leren. Hierdoor zijn je doorgroeimogelijkheden erg groot. Zo werk ik zelf zonder problemen nu met Magento, een PHP gebaseerd framework, ondanks dat we daar nooit mee gewerkt hebben op de opleiding."
+    },
+    {
+      "type": "student",
+      "name": "Sascha Davidson",
+      "linkedin": "https://www.linkedin.com/in/sascha-davidson-7293921a3/",
+      "company": "Debitan",
+      "location": "Hoorn",
+      "companyUrl": "https://debitan.nl/",
+      "avatar": "./assets/avatars/sascha.jpg",
+      "quote": "De opleiding was leuk en leerzaam. Ik heb er veel kennis opgedaan over het bouwen van websites, en dat heeft een stevige basis gelegd voor het webdevelopmentwerk dat ik nu met veel plezier doe."
+    },
+    {
+      "type": "student",
+      "name": "Daphne Zwuup",
+      "linkedin": "https://www.linkedin.com/in/daphnezwuup/",
+      "company": "Innovative365",
+      "location": "Purmerend",
+      "companyUrl": "https://innovative.nl/",
+      "avatar": "./assets/avatars/daphne.jpg",
+      "quote": "De ervaring met toegankelijkheid, API/CMS-integraties en webdesign heeft mijn zelfvertrouwen versterkt. Mijn baas is vooral positief over mijn pagina-ontwerpen en mijn werk met Blazor-componenten, HTML, CSS en Radzen."
+    },
+    {
+      "type": "student",
+      "name": "Thomas Scheepers",
+      "linkedin": "https://www.linkedin.com/in/thomas-scheepers-b83676187/",
+      "company": "HyperSolid",
+      "location": "Alkmaar",
+      "companyUrl": "https://www.wearetriple.com/",
+      "avatar": "./assets/avatars/thomas.jpg",
+      "quote": "Bij FDND kon ik meteen doen in plaats van alleen leren, waardoor het voelde alsof ik al in het werkveld stond. Die ervaring heeft mijn groei versneld en het instromen in mijn huidige baan enorm soepel gemaakt."
+    },
+    {
+      "type": "student",
+      "name": "Lisa van Mansom",
+      "linkedin": "https://www.linkedin.com/in/lisa-van-mansom-b78059231/",
+      "company": "DutchDrops",
+      "location": "Haarlem",
+      "companyUrl": "https://dutchdrops.com/",
+      "avatar": "./assets/avatars/lisa-m.jpg",
+      "quote": "FDND gaf me een sterke basis in Frontend Development. Die kennis gebruik ik nu bij het bouwen van professionele e-commerce websites."
+    },
+    {
+      "type": "student",
+      "name": "Tolga Doğaner",
+      "linkedin": "https://www.linkedin.com/in/tolga-doganer-1b76aa161/",
+      "company": "Funda",
+      "location": "Amsterdam",
+      "companyUrl": "https://www.funda.nl/",
+      "avatar": "./assets/avatars/tolga.jpg",
+      "quote": "De opleiding heeft mij veel zekerheid en richting gegeven in mijn groei als ontwikkelaar. De ervaring en kennis die de docenten meebrengen zijn van uitzonderlijk niveau en nergens anders te vinden. Daarnaast biedt FDND mogelijkheden om te netwerken met bedrijven, wat mij persoonlijk heeft geholpen bij de start van mijn carrière."
+    },
+    {
+      "type": "student",
+      "name": "Sanne van Seeventer",
+      "linkedin": "https://www.linkedin.com/in/sanne-van-seeventer-51ab22bb/",
+      "company": "Kendew Agency",
+      "location": "Amsterdam",
+      "companyUrl": "https://www.kendew-agency.com/",
+      "avatar": "./assets/avatars/sanne.jpg",
+      "quote": "Bij FDND voelde ik mij snel thuis dankzij de persoonlijke benadering en de open sfeer. Na mijn studie kon ik direct aan de slag bij Kendew Agency, waar ik nu met veel plezier werk en mijn design- en code skills samenbreng."
+    },
+    {
+      "type": "student",
+      "name": "Christopher Willems",
+      "linkedin": "https://www.linkedin.com/in/christopher-willems-83238b196/",
+      "company": "Monytri",
+      "location": "freelance",
+      "companyUrl": "https://monytri.com/",
+      "avatar": "./assets/avatars/christopher.jpg",
+      "quote": "Wat deze studie voor mij bijzonder maakte, was de combinatie van vrijheid en goede begeleiding. Ik kreeg de ruimte om mijn eigen manier van werken te ontwikkelen, terwijl ik tegelijkertijd leerde hoe je op een professionele en gestructureerde manier websites en systemen bouwt.\n\nDe warme sfeer en de nauwe samenwerking met medestudenten en docenten maakten het leerproces extra waardevol. Door al vroeg samen te werken met echte bedrijven ontdekte ik hoe je digitale producten ontwikkelt voor échte klanten en gebruikers, en juist in die praktijkervaring groeide mijn aandacht voor toegankelijkheid en semantiek. Die focus heeft mijn blik voorgoed veranderd en vormt nu de kern van mijn werk als developer."
+    },
+    {
+      "type": "student",
+      "name": "Sammy Bensink",
+      "linkedin": "https://www.linkedin.com/in/sammy-bensink/",
+      "company": "sammm.my",
+      "location": "Arnhem",
+      "companyUrl": "https://www.sammm.my/",
+      "avatar": "./assets/avatars/sammy.jpg",
+      "quote": "Ik was net afgestudeerd vormgever toen ik bij FDND begon. Het was een hele andere manier van werken, met een leermethode die erg modern en up-to-date is. De oefeningen die ik kreeg, leerden mij de stof beter te begrijpen en in te zien hoe het web in elkaar zit. Daarnaast zijn er veel betrokken medestudenten en docenten die je willen helpen de stof beter te begrijpen en te groeien.\n\nTerugkijkend ben ik erg tevreden met mijn keuze en had het niet anders willen doen."
+    },
+    {
+      "type": "student",
+      "name": "Patrick Hordijk",
+      "linkedin": "https://www.linkedin.com/in/patrickhordijk/",
+      "company": "Sumix Studio",
+      "location": null,
+      "companyUrl": "https://sumix.nl/",
+      "avatar": "./assets/avatars/patrick.jpg",
+      "quote": "Door de FDND opleiding leerde ik hoe belangrijk toegankelijkheid en de eindgebruiker zijn binnen het vak. Ik ontdekte hoe een sterke basis en gerichte enhancements zorgen voor een betere ervaring. Dankzij deze kennis kan ik bij Sumix Studio websites maken die voor iedereen toegankelijk zijn."
+    },
+    {
+      "type": "student",
+      "name": "Stefan van der Kort",
+      "linkedin": "https://www.linkedin.com/in/stefan-van-der-kort-196513158/",
+      "company": "Esens Design",
+      "location": null,
+      "companyUrl": "https://www.esens.nl/",
+      "avatar": "./assets/avatars/stefan.jpg",
+      "quote": "De opleiding FDND heeft mij geleerd hoe ontwerp en front-end development elkaar kunnen versterken voor het bouwen van robuuste websites.\n\nHierdoor heb ik mijn vaardigheden verbreed en ben ik goed inzetbaar op de arbeidsmarkt. De nadruk op samenwerken, communicatie en het blijven leren van nieuwe technieken heeft mij geholpen om met vertrouwen de stap naar het werkveld te zetten."
+    },
+    {
+      "type": "partner",
+      "name": "Robbert Broersma",
+      "linkedin": "https://www.linkedin.com/in/robbertbroersma/",
+      "company": "Frameless",
+      "location": "Amersfoort",
+      "companyUrl": "https://frameless.io/",
+      "avatar": "./assets/avatars/robbert.jpg",
+      "quote": "We waren blij dat de twee FDND stagiairs na hun stage bij Frameless wilden blijven! Ze hadden goede fundamentele skills voor het web platform, praktijkervaring met diverse frameworks en CMS-en, en gingen goed georganiseerd en sociaal aan de slag in ons scrum-team. Veel tevreden klanten, weinig zorgen!"
+    },
+    {
+      "type": "partner",
+      "name": "Shyanta Vleugel",
+      "linkedin": "https://www.linkedin.com/in/shyantav/",
+      "company": "HyperSolid",
+      "location": "Alkmaar",
+      "companyUrl": "https://www.wearetriple.com/",
+      "avatar": "./assets/avatars/shyanta.jpg",
+      "quote": "We zijn als Hypersolid al een langere tijd betrokken bij FDND en nog altijd even enthousiast. Studenten die stage komen lopen bij ons passen goed binnen het bedrijf. Ze hebben al weet van de Scrum methodieken en hebben een goede technische basis opgebouwd, waardoor ze onze tech-stacks snel eigen kunnen maken. Ze denken mee op technisch en op design vlak maar zijn bovenal leergierig en groeien daardoor hard mee!"
+    },
+    {
+      "type": "partner",
+      "name": "Dave Bitter",
+      "linkedin": "https://www.linkedin.com/in/davebitter/",
+      "company": "iO Digital",
+      "location": "Amsterdam",
+      "companyUrl": "https://www.iodigital.com/",
+      "avatar": "./assets/avatars/dave.jpg",
+      "quote": "Ellenoor kwam als net afgestudeerde FDND'er bij ons binnen en verraste ons direct met haar leervermogen. Ze pikte onze tech stack (React.js en Next.js) razendsnel op en draagt nu al bij aan projecten. Daarnaast deelt ze actief kennis via ons tech blog. FDND levert echt startklare professionals die zowel technisch als qua houding goed voorbereid zijn!"
+    },
+    {
+      "type": "partner",
+      "name": "Eric Mulder",
+      "linkedin": "https://www.linkedin.com/in/eric-mulder-a9150518/",
+      "company": "Label Vier",
+      "location": "Amersfoort",
+      "companyUrl": "https://labelvier.nl/",
+      "avatar": "./assets/avatars/eric.jpg",
+      "quote": "De studenten van FDND passen perfect bij de werkwijze van Label Vier. Dankzij de opleiding ben je op de hoogte van de nieuwste techieken en werkwijze, maar word je ook goed klaargestoomd voor de arbeidsmarkt."
+    },
+    {
+      "type": "partner",
+      "name": "Declan Rek",
+      "linkedin": "https://www.linkedin.com/in/declanrek/",
+      "company": "De Voorhoede",
+      "location": "Amsterdam",
+      "companyUrl": "https://www.voorhoede.nl/",
+      "avatar": "./assets/avatars/declan.jpg",
+      "quote": "Na zijn stage is Luuk bij ons in dienst gekomen en kon hij meteen volwaardig meedraaien in het team. Bij FDND leren studenten de kernprincipes van het web via praktijkgerichte leertrajecten, zodat ze helemaal klaar zijn voor de arbeidsmarkt."
+    },
+    {
+      "type": "partner",
+      "name": "David Withuis",
+      "linkedin": "https://www.linkedin.com/in/david-withuis/",
+      "company": "Werktijden.nl",
+      "location": "Amsterdam",
+      "companyUrl": "https://werktijden.nl",
+      "avatar": "./assets/avatars/david.jpg",
+      "quote": "Het was echt bijzonder om te zien hoe onze FDND-stagiairs uitgroeien tot volwaardige collega’s. Doordat ze de opdrachten goed wisten aan te sluiten, hebben wij hier veel aan gehad. En met nieuwe ideeën en vooral jonge frisse blikken gaven ze ons team nieuwe inzichten. Dat werkt niet alleen inspirerend voor korte periodes, maar blijkt zelfs waardevol op de lange termijn. Meerdere FDND’ers zijn inmiddels bij ons doorgegroeid naar een vaste rol. Hun open, gestructureerde en sociale manier van werken maakte dat ze naadloos in ons team pasten."
+    },
+    {
+      "type": "partner",
+      "name": "Lars Schuitema",
+      "linkedin": "https://www.linkedin.com/in/larsschuitema/",
+      "company": "Funda",
+      "location": "Amsterdam",
+      "companyUrl": "https://www.funda.nl/",
+      "avatar": "./assets/avatars/lars.jpg",
+      "quote": "Als student Communicatie & Multimedia Design (CMD) volgde ik destijds de frontend minor. Tijdens deze minor kreeg ik al de kans om bij Funda een opdracht te doen, en inmiddels werk ik daar al zeven jaar als frontend developer.\n\nLater hebben docenten vanuit CMD de Associate Degree Frontend Design & Development (FDND) opgericht. Vanuit mijn rol bij Funda heb ik de samenwerking met FDND geïntroduceerd en verder opgebouwd. Jaarlijks bieden wij opdrachten aan voor eerste- en tweedejaars studenten en hebben we ook een stageplek begeleid.\n\nEen mooie mijlpaal was een stage via de FDND stagemarkt, waar uiteindelijk een contract bij Funda uit is voortgevloeid. Inmiddels werkt deze stagiair bij Funda en werken we nauw samen.\n\nDeze samenwerking laat zien wat er mogelijk is wanneer onderwijs en praktijk écht samen optrekken: studenten krijgen een waardevolle start, bedrijven ontdekken nieuw talent en FDND leidt professionals op die direct impact maken."
+    }
+  ]
+}
+
