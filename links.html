@@ -46,23 +46,7 @@
       --title-large: 3rem;
       --title-spacing: -0.1rem;
     }
-
-    body {
-      background-color: var(--base-color);
-      color: var(--color);
-      font-family: 'Open Sans', sans-serif;
-      font-size: var(--text-regular);
-      margin:0;
-      padding: 2rem 0.8rem;
-
-      @media (min-width: 30rem){
-        padding: 2.4rem 1.2rem;
-      }
-
-      @media (min-width: 40rem){
-        padding: 3rem 2rem;
-      }
-    }
+    /* BASE TYPO STYLING */
     h1 {
       font-size: var(--title-medium);
       font-weight: bold;
@@ -78,21 +62,40 @@
     }
     p {
       letter-spacing: var(--text-spacing);
-      margin-top: 0.4rem;
     }
-    small{
+    small {
       font-size: var(--text-small);
     }
     a {
       padding: 0.2rem;
     }
-    a:hover, a:focus{
+    a:hover, a:focus {
       /* border: 2px var(--accent-color-3) solid; */
       background-color: var(--accent-color-3) ;
       border-radius: var(--radius);
     }
 
-    /* HEADER */
+   body {
+      background-color: var(--base-color);
+      color: var(--color);
+      font-family: 'Open Sans', sans-serif;
+      font-size: var(--text-regular);
+      margin:0;
+      padding: 2rem 0.8rem;
+
+      @media (min-width: 30rem){
+        padding: 2.4rem 1.2rem;
+      }
+
+      @media (min-width: 40rem){
+        padding: 3rem 2rem;
+      }
+    }
+    /* HEADER 
+      HvA logo
+      FDND Logo
+      Social links
+    */
     header {
       font-size: var(--text-small);
       height: 6rem;
@@ -141,19 +144,25 @@
         margin-top: -6.4rem;
       }      
     }
-
-
     /* MAIN */
     main {
       margin: 2rem auto;
       padding: 3rem 2rem;
       background-color: var(--background);
       border-radius: var(--radius);
+      max-width: 50rem;
+      p {
+        margin-top: 0.4rem;
+      }
 
       @media (min-width: 40rem){
         padding: 4rem 3rem;
       }
     }
+
+    /* ARTICLE
+      Articles with links to student projects.
+    */
     article {
       margin-top: 2rem;
       padding-bottom: 1rem;
@@ -167,8 +176,16 @@
       h3 {
         margin: 0;
       }
+      p {
+        margin-top: 0.4rem;
+      }
       img {
-        margin-right: 1.8rem
+        margin-right: 1.8rem;
+        @media (min-width: 40rem){
+          width: 200px;
+          height: 125px;
+          /* aspect-ratio: 16 / 9; */
+        }
       }
       a {
         display: block;
@@ -180,6 +197,10 @@
           color: var(--background);
           background: var(--blue);
         }
+      }
+      small{
+        display: block; 
+        margin-top: 1rem;
       }
     }
 
@@ -271,19 +292,33 @@
   <main>
 
     <h1>Linklijst</h1>
-    <p>Lijst met links van studentenwerk en interessante projecten.</p>
+    <p>Lijst met links van studentenwerk en interessante projecten van <abbr title="Frontend Design & Development">FDND</abbr>.</p>
 
+    <!-- 
+      ARTICLES 
+      Articles with links to student projects.
+
+      Title: project naam, student first name 
+      Text: tech stack, design features, sprint name
+      Link to project
+      Link to code repo
+      Img: aspect ration 4/3, 200px/150px
+      Date  
+    -->
     <article>
-      <img src="./assets/linklijst/visitekaartje-tom.jpg" alt="" width="200" height="123">
+      <img src="./assets/linklijst/visitekaartje-tom.jpg" alt="" width="100%">
       <div>
         <h3>Visitekaartje Tom</h3>
-        Stack: NodeJS, JSON, HTML, CSS, JS
-        Sprint: Connect Your Tribe. 
+        <p>
+          Stack: NodeJS, JSON, HTML, CSS, JS. 
+          Design: Animation, Micro-interactions, Sound.
+          Sprint: Connect Your Tribe. 
+        </p>
         <a href="https://tom-connect-your-tribe-profile-card.onrender.com">Live link</a>
         <a href="https://github.com/TZGaming/connect-your-tribe-profile-card">Repository met code op Github</a>
         <small>6/2/2026</small>
       </div>
-      </article>
+    </article>
 
   </main>
 
