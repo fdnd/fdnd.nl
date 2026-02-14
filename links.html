@@ -174,17 +174,20 @@
         display: flex;
       }
       h3 {
-        margin: 0;
+        margin: 1rem 0;
+       @media (min-width: 40rem){
+          margin-top: 0;
+        } 
       }
       p {
-        margin-top: 0.4rem;
+        margin: 0.4rem 0;
       }
       img {
         margin-right: 1.8rem;
         @media (min-width: 40rem){
-          width: 200px;
-          height: 125px;
-          /* aspect-ratio: 16 / 9; */
+          width: 50%;
+          height: 50%;
+          /* aspect-ratio: 4 / 3; */
         }
       }
       a {
@@ -196,6 +199,7 @@
         &:hover, &:focus{
           color: var(--background);
           background: var(--blue);
+          padding: 0.2rem 1rem;
         }
       }
       small{
