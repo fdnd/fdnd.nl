@@ -46,6 +46,10 @@
       --title-large: 3rem;
       --title-spacing: -0.1rem;
     }
+    *, *::before, *::after {
+      /* control how the width and height of an element are calculated */
+      box-sizing: border-box;
+    }
     /* BASE TYPO STYLING */
     h1 {
       font-size: var(--title-medium);
@@ -53,7 +57,7 @@
       letter-spacing: var(--title-spacing);
       margin: 0;
 
-      @media (min-width: 40rem){
+      @media (min-width: 40rem) {
         font-size: var(--title-large);
       }
     }
@@ -83,14 +87,15 @@
       margin:0;
       padding: 2rem 0.8rem;
 
-      @media (min-width: 30rem){
+      @media (min-width: 30rem) {
         padding: 2.4rem 1.2rem;
       }
 
-      @media (min-width: 40rem){
+      @media (min-width: 40rem) {
         padding: 3rem 2rem;
       }
     }
+
     /* HEADER 
       HvA logo
       FDND Logo
@@ -100,7 +105,7 @@
       font-size: var(--text-small);
       height: 6rem;
 
-      @media (min-width: 30rem){
+      @media (min-width: 30rem) {
         height: 8rem;
       }
 
@@ -116,7 +121,7 @@
       p {
         display: none;
 
-        @media (min-width: 33rem){
+        @media (min-width: 33rem) {
           display: inline;
           position: relative;
           top: -0.9rem;
@@ -151,12 +156,13 @@
       background-color: var(--background);
       border-radius: var(--radius);
       max-width: 50rem;
-      p {
-        margin-top: 0.4rem;
-      }
 
       @media (min-width: 40rem){
         padding: 4rem 3rem;
+      }
+
+      p {
+        margin-top: 0.4rem;
       }
     }
 
@@ -173,37 +179,65 @@
       @media (min-width: 40rem){
         display: flex;
       }
+
       h3 {
         margin: 1rem 0;
-       @media (min-width: 40rem){
+
+        @media (min-width: 40rem){
           margin-top: 0;
         } 
       }
+
       p {
         margin: 0.4rem 0;
       }
+
       img {
-        margin-right: 1.8rem;
-        border: 1px var(--color) solid;
-        @media (min-width: 40rem){
-          width: 50%;
-          height: 50%;
-          /* aspect-ratio: 4 / 3; */
+        background: url("/assets/linklijst/browser.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* background-size: contain; */
+        padding: 2rem 1rem 1rem 1rem;
+        aspect-ratio: 4/3;
+
+        @media (min-width: 24rem) {
+          padding-top: 2.5rem;
         }
+
+        @media (min-width: 30rem) {
+          padding-top: 3.4rem;
+        }
+
+        @media (min-width: 40rem) {
+          padding-top: 2.5rem;
+          margin-right: 1.8rem;
+          width: 320px;
+          height: 240px;
+        }
+
+        /* @media (min-width: 40rem) {
+          padding-top: 2.5rem;
+          margin-right: 1.8rem;
+          width: 320px;
+          height: 240px;
+        } */
+        
       }
+
       a {
         display: block;
         padding: 0.2rem 0;
         width: fit-content;
         border-radius: var(--small-radius);
 
-        &:hover, &:focus{
+        &:hover, &:focus {
           color: var(--background);
           background: var(--blue);
           padding: 0.2rem 1rem;
         }
       }
-      small{
+
+      small {
         display: block; 
         margin-top: 1rem;
       }
