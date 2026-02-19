@@ -24,6 +24,7 @@
       --purple: #A675F5;
       --blue: #050542;
       --blue-50: rgba(5, 5, 66, 0.5);
+      --blue-20: rgba(5, 5, 66, 0.2);
       --green: #66E5BF;
       --yellow: #FFFC86;
 
@@ -197,11 +198,25 @@
         display: block;
         height: fit-content;
         background: url("/assets/linklijst/browser.png");
+        background-color: none;
         background-repeat: no-repeat;
         background-size: 100% 100%;
         /* background-size: contain; */
         padding: 5%;
         padding-top: 12%;
+
+        --rotate: -2deg;
+        transform: rotate(var(--rotate));
+        /* box-shadow: var(--radius) var(--radius) var(--radius) var(--blue-20); */
+        filter: drop-shadow(4px 4px 8px #999);
+        transition: all 0.2s ease-out;
+
+        /* &:hover{
+          transform:rotate(0);
+          transform: scale(1.05);
+          transform: translateY(-10px);
+          filter: drop-shadow(0 12px 16px #666);
+        } */
 
         @media (min-width: 40rem) {
           padding: 3%;
@@ -342,7 +357,7 @@
       Date  
     -->
     <article>
-      <picture>
+      <picture style="--rotate:-3deg">
         <source srcset="./assets/linklijst/13022026-squadpage-yassine.webp" type="image/webp">
         <img src="./assets/linklijst/13022026-squadpage-yassine.jpg" alt="" loading="eager" decoding="async">
       </picture>
@@ -360,7 +375,7 @@
     </article>
 
     <article>
-      <picture>
+      <picture style="--rotate:1deg">
         <source srcset="./assets/linklijst/06022026-visitekaartje-tom.webp" type="image/webp">
         <img src="./assets/linklijst/06022026-visitekaartje-tom.jpg" alt="" loading="lazy" decoding="async">
       </picture>
