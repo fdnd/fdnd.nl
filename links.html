@@ -191,37 +191,42 @@
       p {
         margin: 0.4rem 0;
       }
-
-      img {
+      picture {
+        display: block;
+        height: fit-content;
         background: url("/assets/linklijst/browser.png");
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 100% 100%;
         /* background-size: contain; */
-        padding: 2rem 1rem 1rem 1rem;
+        padding: 5%;
+        padding-top: 12%;
+        /* aspect-ratio: 4/3; */
+
+        @media (min-width: 40rem) {
+          padding: 3%;
+          padding-top: 8%;
+          margin-right: 1.8rem;
+          width: 960px;
+          /* width: 100%; */
+          /* height: 240px; */
+          /* flex-grow: 4; */
+          /* aspect-ratio: 4/3; */
+        }
+
+      }
+      img {
+        width: 100%;
         aspect-ratio: 4/3;
 
         @media (min-width: 24rem) {
-          padding-top: 2.5rem;
+          /* padding-top: 2.5rem; */
         }
 
         @media (min-width: 30rem) {
-          padding-top: 3.4rem;
+          /* padding-top: 3.4rem; */
         }
 
-        @media (min-width: 40rem) {
-          padding-top: 2.5rem;
-          margin-right: 1.8rem;
-          width: 320px;
-          height: 240px;
-        }
 
-        /* @media (min-width: 40rem) {
-          padding-top: 2.5rem;
-          margin-right: 1.8rem;
-          width: 320px;
-          height: 240px;
-        } */
-        
       }
 
       a {
@@ -345,7 +350,10 @@
       Date  
     -->
     <article>
-      <img src="./assets/linklijst/13022026-squadpage-yassine.jpg" alt="" width="100%" loading="eager">
+      <picture>
+        <source srcset="./assets/linklijst/13022026-squadpage-yassine.webp" type="image/webp">
+        <img src="./assets/linklijst/13022026-squadpage-yassine.jpg" alt="" loading="eager" decoding="async">
+      </picture>
       <div>
         <h3>Squadpage Yassine</h3>
         <p>
@@ -360,7 +368,10 @@
     </article>
 
     <article>
-      <img src="./assets/linklijst/06022026-visitekaartje-tom.jpg" alt="" width="100%" loading="lazy">
+      <picture>
+        <source srcset="./assets/linklijst/06022026-visitekaartje-tom.webp" type="image/webp">
+        <img src="./assets/linklijst/06022026-visitekaartje-tom.jpg" alt="" loading="lazy" decoding="async">
+      </picture>
       <div>
         <h3>Visitekaartje Tom</h3>
         <p>
