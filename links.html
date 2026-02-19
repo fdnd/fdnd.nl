@@ -211,13 +211,6 @@
         filter: drop-shadow(4px 4px 8px #999);
         transition: all 0.2s ease-out;
 
-        /* &:hover{
-          transform:rotate(0);
-          transform: scale(1.05);
-          transform: translateY(-10px);
-          filter: drop-shadow(0 12px 16px #666);
-        } */
-
         @media (min-width: 40rem) {
           padding: 3%;
           padding-top: 8%;
@@ -251,6 +244,18 @@
       small {
         display: block; 
         margin-top: 1rem;
+      }
+    }
+    /* Eerste picture groter maken */
+    article:first-of-type picture{
+      transform: scale(1.1) rotate(var(--rotate)) translateX(-0.1rem);
+      
+      &+div{
+        margin-top: 2.5rem;
+
+        @media (min-width: 40rem) {
+          margin-top: 0;
+        }
       }
     }
 
@@ -357,7 +362,7 @@
       Date  
     -->
     <article>
-      <picture style="--rotate:-3deg">
+      <picture style="--rotate:-4deg">
         <source srcset="./assets/linklijst/13022026-squadpage-yassine.webp" type="image/webp">
         <img src="./assets/linklijst/13022026-squadpage-yassine.jpg" alt="" loading="eager" decoding="async">
       </picture>
@@ -375,7 +380,7 @@
     </article>
 
     <article>
-      <picture style="--rotate:1deg">
+      <picture style="--rotate:2deg">
         <source srcset="./assets/linklijst/06022026-visitekaartje-tom.webp" type="image/webp">
         <img src="./assets/linklijst/06022026-visitekaartje-tom.jpg" alt="" loading="lazy" decoding="async">
       </picture>
@@ -391,6 +396,24 @@
         <small>6/2/2026</small>
       </div>
     </article>
+
+    <!-- <article>
+      <picture style="--rotate:-2deg">
+        <source srcset="./assets/linklijst/13022026-squadpage-yassine.webp" type="image/webp">
+        <img src="./assets/linklijst/13022026-squadpage-yassine.jpg" alt="" loading="eager" decoding="async">
+      </picture>
+      <div>
+        <h3>Squadpage Yassine</h3>
+        <p>
+          Stack: NodeJS, JSON, HTML, CSS. 
+          Design: Micro-interactions, Sound, Scroll-driven animation.
+          Sprint: Connect Your Tribe. 
+        </p>
+        <a href="https://connect-your-tribe-squad-page-e3f8.onrender.com/">Live link</a>
+        <a href="https://github.com/yassineAk1/connect-your-tribe-squad-page">Repository met code op Github</a>
+        <small>13/2/2026</small>
+      </div>
+    </article> -->
 
   </main>
 
