@@ -35,7 +35,7 @@
       --accent-color-2: var(--green);
       --accent-color-3: var(--yellow);
 
-      --small-radius: 0.2rem;
+      --radius-small: 0.2rem;
       --radius: 0.5rem;
 
       --text-small: 0.8rem;
@@ -71,8 +71,9 @@
     small {
       font-size: var(--text-small);
     }
-    a {
+    a, a:visited  {
       padding: 0.2rem;
+      color: var(--color);
     }
     a:hover, a:focus {
       /* border: 2px var(--accent-color-3) solid; */
@@ -172,8 +173,9 @@
       Articles with links to student projects.
     */
     article {
+      position: relative;
       margin-top: 3rem;
-      padding-bottom: 1rem;
+      padding: 1rem 0;
       border-bottom: 1px var(--color) solid;
       max-width: 40rem;
       letter-spacing: var(--text-spacing);
@@ -194,8 +196,21 @@
         margin: 0.4rem 0;
       }
 
+      time {
+        display: block;
+        position: absolute;
+        top: 0; 
+        left: 0;
+        font-size: var(--text-small);
+        padding: 0.4rem 0.5rem;
+        border: 1px solid var(--color);
+        background-color: var(--background);
+        border-radius: var(--radius-small);
+      }
+
       picture {
         display: block;
+        position: relative;
         height: fit-content;
         background: url("/assets/linklijst/browser.svg");
         background-color: none;
@@ -204,6 +219,7 @@
         /* background-size: contain; */
         padding: 5%;
         padding-top: 12%;
+        margin-top: 1.6rem;
 
         --rotate: -2deg;
         transform: rotate(var(--rotate));
@@ -215,15 +231,15 @@
           padding: 3%;
           padding-top: 8%;
           margin-right: 1.8rem;
-          width: 960px;
-          /* width: 650px; */
+          min-width: 20rem;
+          /* width: 640px; */
           /* height: 540px; */
         }
 
         img {
-          /* width: 576px; */
+          /* width: 640px; */
           width: 100%;
-          /* height: 432px; */
+          /* height: 480px; */
           aspect-ratio: 4/3;
         }
       }
@@ -232,7 +248,7 @@
         display: block;
         padding: 0.2rem 0;
         width: fit-content;
-        border-radius: var(--small-radius);
+        border-radius: var(--radius--mall-);
 
         &:hover, &:focus {
           color: var(--background);
@@ -346,7 +362,7 @@
 
   <main>
 
-    <h1>Linklijst</h1>
+    <h1>FDND Linklijst</h1>
     <p>Lijst met links van studentenwerk en interessante projecten van <abbr title="Frontend Design & Development">FDND</abbr>.</p>
 
     <!-- 
@@ -367,15 +383,15 @@
         <img src="./assets/linklijst/20022026-squadpage-joy.jpg" alt="" loading="eager" decoding="async">
       </picture>
       <div>
-        <h3>Squadpage Angel, Isaac en Seb</h3>
+        <h3>Squadpage Angel, Isaac, Seb</h3>
         <p>
           Stack: NodeJS, Express, LiquidJS. 
           Design: Filter, Sort, Search en Like.
           Sprint: Connect Your Tribe. 
         </p>
         <a href="https://connect-your-tribe-team-squad-page-y1rh.onrender.com">Live link</a>
-        <a href="https://github.com/IsaacEswa/connect-your-tribe-team-squad-page">Repository met code op Github</a>
-        <small>20/2/2026</small>
+        <a href="https://github.com/IsaacEswa/connect-your-tribe-team-squad-page">Code op Github</a>
+        <time datetime="2026-02-20">20 februari 2026</time> 
       </div>
     </article>
 
@@ -392,8 +408,8 @@
           Sprint: Connect Your Tribe. 
         </p>
         <a href="https://connect-your-tribe-squad-page-e3f8.onrender.com/">Live link</a>
-        <a href="https://github.com/yassineAk1/connect-your-tribe-squad-page">Repository met code op Github</a>
-        <small>13/2/2026</small>
+        <a href="https://github.com/yassineAk1/connect-your-tribe-squad-page">Code op Github</a>
+        <time datetime="2026-02-13">13 februari 2026</time> 
       </div>
     </article>
 
@@ -410,8 +426,8 @@
           Sprint: Connect Your Tribe. 
         </p>
         <a href="https://tom-connect-your-tribe-profile-card.onrender.com">Live link</a>
-        <a href="https://github.com/TZGaming/connect-your-tribe-profile-card">Repository met code op Github</a>
-        <small>6/2/2026</small>
+        <a href="https://github.com/TZGaming/connect-your-tribe-profile-card">Code op Github</a>
+        <time datetime="2026-02-06">6 februari 2026</time> 
       </div>
     </article>
 
