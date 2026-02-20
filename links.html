@@ -58,7 +58,7 @@
       letter-spacing: var(--title-spacing);
       margin: 0;
 
-      @media (min-width: 40rem) {
+      @media (min-width: 44rem) {
         font-size: var(--title-large);
       }
     }
@@ -93,7 +93,7 @@
         padding: 2.4rem 1.2rem;
       }
 
-      @media (min-width: 40rem) {
+      @media (min-width: 44rem) {
         padding: 3rem 2rem;
       }
     }
@@ -160,7 +160,7 @@
       border-radius: var(--radius);
       max-width: 50rem;
 
-      @media (min-width: 40rem){
+      @media (min-width: 44rem){
         padding: 4rem 3rem;
       }
 
@@ -173,21 +173,26 @@
       Articles with links to student projects.
     */
     article {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* background: pink; */
       position: relative;
       margin-top: 3rem;
       padding: 1rem 0;
       border-bottom: 1px var(--color) solid;
-      max-width: 40rem;
+      /* max-width: 40rem; */
       letter-spacing: var(--text-spacing);
 
-      @media (min-width: 40rem){
-        display: flex;
+      @media (min-width: 44rem){
+        flex-direction: row;
       }
 
       div{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        max-width: 28rem;
       }
 
       h3 {
@@ -214,12 +219,13 @@
         display: block;
         position: relative;
         height: fit-content;
+        max-width: 28rem;
         background: url("/assets/linklijst/browser.svg");
         background-color: none;
         background-repeat: no-repeat;
         background-size: 100% 100%;
         /* background-size: contain; */
-        padding: 5%;
+        padding: 4%;
         padding-top: 12%;
         margin-top: 3rem;
 
@@ -229,7 +235,7 @@
         filter: drop-shadow(4px 4px 8px #999);
         transition: all 0.2s ease-out;
 
-        @media (min-width: 40rem) {
+        @media (min-width: 44rem) {
           padding: 3%;
           padding-top: 8%;
           margin-right: 2rem;
@@ -260,17 +266,11 @@
       }
 
     }
-    /* Eerste picture groter maken */
-    article:first-of-type picture{
+    /* 
+      Eerste picture groter maken 
+    */
+    article:first-of-type picture {
       transform: scale(1.1) rotate(var(--rotate)) translateX(-0.1rem);
-      
-      &+div{
-        margin-top: 2.5rem;
-
-        @media (min-width: 40rem) {
-          margin-top: 0;
-        }
-      }
     }
 
     /* utils */
