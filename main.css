@@ -71,11 +71,12 @@ a {
 
 /* Basics */
 
-html,
-body {
-  scroll-behavior: smooth;
+@media (prefers-reduced-motion:no-preference) {
+  html,
+  body {
+    scroll-behavior: smooth;
+  }
 }
-
 html {
   background-color: var(--base-color);
 }
