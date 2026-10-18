@@ -823,8 +823,7 @@ Fixed button
 .fixed-button .small-body {
   color: black;
   font-weight: 600;
-  text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 14px;
 }
 
 .fixed-button .inner {
