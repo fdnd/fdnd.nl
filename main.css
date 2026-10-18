@@ -821,7 +821,10 @@ Fixed button
 }
 
 .fixed-button .small-body {
-  color: var(--grey)
+  color: black;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1rem;
 }
 
 .fixed-button .inner {
@@ -834,7 +837,7 @@ Fixed button
 
 .fixed-button p {
   margin-bottom: 0.3em;
-  color: var(--background);
+  /* color: var(--background); */
 }
 
 .fixed-button .button {
